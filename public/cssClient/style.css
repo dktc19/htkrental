@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),url("");
+    background-size:cover ;
+    height: 100vh;
+    background-repeat:no-repeat ;
+    overflow: hidden;
+    font-family: tahoma;
+}
+.rat{
+    width: 93%;
+    max-width: 350px;
+    text-align: center;
+    margin: 4% auto;
+    padding: 40px 0;
+    background: #111;
+    color: #eee;
+    border-radius:5px ;
+    border: 2px solid #444;
+    margin-top:25px ;
+}
+
+div.stars{
+    width: 270px;
+    display: inline-block;
+}
+input.star{
+    display: none;
+}
+label.star{
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all 0.2s;
+
+}
+input.star:checked ~ label.star:before{
+    content: '\f006';
+    color: #fd4;
+    transition: all 0.2s;
+}
+
+input.star-5:checked~label.star:before{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+label.star:before{
+    content: '\f006';
+    font-family: FontAwesome;
+}
