@@ -213,7 +213,9 @@
                         @endforeach
                     </div>
                 </div>
-
+                <div class="rq-pagination">
+                    {{$product->links()}}
+                </div>
             </div>
 
         </div>

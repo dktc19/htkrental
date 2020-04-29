@@ -197,6 +197,7 @@ class ClientController extends Controller
 
     public function getSearch(Request $request){
         $product= Products::where('title','like','%'.$request->key.'%')->get();
+        $product= Products::orderBy('created_at','asc')->paginate(6);
         $id_receivelc = $request->id_receivelc;
         $location =Locations::all();
         $typeproduct = TypeProducts::all();
