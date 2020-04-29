@@ -210,11 +210,7 @@
                                         <img src="upload/image/image_product/{{$pr->image}}" alt="">
                                     </div>
                                     <div class="listing-details">
-                                        @foreach($typeproduct as $tpd)
-                                            @if($pr->idModel == $tpd->id)
-                                                <td>{{$tpd->name}}</td>
-                                            @endif
-                                        @endforeach
+                                                <td>{{$pr->title}}</td>
                                         <ul class="rating-list">
                                             <li><i class="ion-star"></i></li>
                                             <li><i class="ion-star"></i></li>

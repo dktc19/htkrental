@@ -137,7 +137,7 @@ class ClientController extends Controller
 
 
     public function getListProduct(){
-        $product= Products::orderBy('created_at','asc')->paginate(4);
+        $product= Products::orderBy('created_at','asc')->paginate(6);
         $typeproduct =TypeProducts::all();
         return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct]);
     }
@@ -200,8 +200,7 @@ class ClientController extends Controller
         $id_receivelc = $request->id_receivelc;
         $location =Locations::all();
         $typeproduct = TypeProducts::all();
-//        $booking = Bookings::all();
-
-        return view('pages.search',['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc]);
+        $bookings = Bookings::all();
+        return view('pages.search',['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc,'bookings'=>$bookings]);
     }
 }
