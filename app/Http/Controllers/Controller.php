@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Locations;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -16,5 +17,6 @@ class Controller extends BaseController
         if(Auth::check()){
             view()->share('user_account',Auth::user());
         }
+
     }
 }

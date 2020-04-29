@@ -14,7 +14,7 @@
             <div class="rq-content-block">
                 <div class="container">
                     <div class="rq-title-container bredcrumb-title text-center"> <!-- start of breadcrumb -->
-                        <h1 class="rq-title light">Car listing detail</h1>
+                        <h1 class="rq-title light">Bike listing detail</h1>
                         <ol class="breadcrumb secondary rq-subtitle">
                             <li><a href="#">Home</a></li>
                             <li><a href="listproduct">Bike listing</a></li>

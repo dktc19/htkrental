@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Bookings;
+use App\Locations;
 use App\Products;
 use App\Reviews;
 use App\TypeProducts;
+
 
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
@@ -21,7 +24,8 @@ class ClientController extends Controller
     {
         $product = Products::all();
         $typeproduct =TypeProducts::all();
-        return view('pages.homepage',['product'=>$product,'typeproduct'=>$typeproduct]);
+        $location = Locations::all();
+        return view('pages.homepage',['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location]);
     }
 
     public function getLogin()
@@ -76,7 +80,7 @@ class ClientController extends Controller
             $message->to($activesuccess,'Visitors')->subject('Active Email success');
         });
 
-        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]))
+        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]));
 
         return redirect('login')->with('noticeRe','Register Successfully');
 
@@ -133,7 +137,7 @@ class ClientController extends Controller
 
 
     public function getListProduct(){
-        $product= Products::all();
+        $product= Products::orderBy('created_at','asc')->paginate(4);
         $typeproduct =TypeProducts::all();
         return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct]);
     }
@@ -154,5 +158,50 @@ class ClientController extends Controller
         $review->save();
 
         return redirect("listdetail/".$id)->with('notice','Comment Success');
+    }
+
+    public function getAbout(){
+        return view('pages.about');
+    }
+
+    public function getContactus(){
+        return view('pages.contactus');
+    }
+
+    public function postContactus(Request $request){
+        $this ->validate($request,
+            [
+                'email'=>'required',
+                'name'=>'required',
+                'contentEmail'=>'required',
+                'subject'=>'required',
+            ],
+            [
+                'name.required'=>'Please input the password',
+                'email.required'=>'You are not input Email',
+                'contentEmail.required'=>'Please input the content',
+                'subject.required'=>'Please input the subject',
+            ]);
+        $email= $request->email;
+        $name = $request->name;
+        $content=$request->contentEmail;
+        $subject=$request->subject;
+
+        Mail::send('pages.email.content',['content'=>$content
+            ],function ($message) use ($email,$name,$subject){
+            $message->from($email,$name);
+            $message->to('htkrental@gmail.com')->subject($subject);
+        });
+        return redirect('contactus')->with('notice','Sent Email Successfully');
+    }
+
+    public function getSearch(Request $request){
+        $product= Products::where('title','like','%'.$request->key.'%')->get();
+        $id_receivelc = $request->id_receivelc;
+        $location =Locations::all();
+        $typeproduct = TypeProducts::all();
+//        $booking = Bookings::all();
+
+        return view('pages.search',['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc]);
     }
 }

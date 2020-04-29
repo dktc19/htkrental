@@ -141,6 +141,13 @@ Route::group(['prefix'=> 'email'],function (){
 
     Route::post('comment/{id}','ClientController@postComment');
 
+    Route::get('about','ClientController@getAbout');
+
+    Route::get('contactus','ClientController@getContactus');
+    Route::post('contactus','ClientController@postContactus');
+
+    Route::get('search','ClientController@getSearch');
+
 
 
 

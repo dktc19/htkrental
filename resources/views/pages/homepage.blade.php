@@ -1,4 +1,71 @@
 @extends('layout.index')
+@section('banner')
+    <div class="header-body" style="background: url('upload/image/banner/banner-index1.jpg') top center no-repeat; background-size: cover;">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <h1>HTK Rental Bike helps you</h1>
+            <p>Rent bike to move from local hosts in 190+ countries.</p>
+            <form method="get" action="search">
+                <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+            <div class="rq-search-container">
+                <div class="rq-search-single">
+                    <div class="rq-search-content">
+                        <span class="rq-search-heading">Location</span>
+                        <select name="id_receivelc" class="category-option" >
+                            <option selected disabled> Select the Location</option>
+                            @foreach($location as $lc)
+                                <option value="{{$lc->id}}">{{$lc-> name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="rq-search">
+                    <div>
+                        <span class="">Name</span><br>
+                        <input type="text" name="key" id="s" placeholder="Input key word..."/>
+                    </div>
+                </div>
+                <div class="rq-search-single">
+                    <div class="rq-search-content">
+                        <span class="rq-search-heading">Pick up</span>
+                        <input type="text" name="id_startdate" class="rq-form-element datepicker" id="startdate" placeholder="Pick up date"/>
+                        <i class="ion-chevron-down datepicker-arrow"></i>
+                    </div>
+                </div>
+                <div class="rq-search-single">
+                    <div class="rq-search-content">
+                        <span class="rq-search-heading">Return</span>
+                        <input type="text" name="id_enddate" class="rq-form-element" id="enddate" placeholder="Return date"/>
+                        <i class="ion-chevron-down datepicker-arrow"></i>
+                    </div>
+                </div>
+                <div class="rq-search-single search-btn">
+                    <div class="rq-search-content">
+                        <button class="rq-btn rq-btn-primary fluid-btn">Search <i class="arrow_right"></i></button>
+                    </div>
+                </div>
+            </div></form>
+            <!-- / .search-container -->
+            <div class="rq-counting-list">
+                <ul class="list-unstyled">
+                    <li>
+                        <span class="count-result" data-from="25" data-to="500" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="count-category">User access</span>
+                    </li>
+                    <li>
+                        <span class="count-result" data-from="25" data-to="500" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="count-category">Cars</span>
+                    </li>
+                    <li>
+                        <span class="count-result" data-from="25" data-to="550" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="count-category">Reviews</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div> <!-- /.header-body -->
+    @endsection
 @section('content')
 <div class="rq-page-content">
     <div class="rq-content-block gray-bg">
@@ -451,7 +518,6 @@
                         <div class="item">
                             <p class="testimoinal-text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                                Pellentesque  eueget ante venenatis euismod. Etiam in odio mattis, suscipit ex sit amet, toronil inoui bibenidum risus.
                             </p>
                             <span class="author-name-title">
                       <img src="cssClient/img/testimoianl1.png" alt="">
@@ -466,44 +532,6 @@
                       </a>
                     </span>
 
-                        </div>
-                        <div class="item">
-                            <p class="testimoinal-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                                Pellentesque  eueget ante venenatis euismod. Etiam in odio mattis, suscipit ex sit amet, toronil inoui bibenidum risus.
-                            </p>
-                            <span class="author-name-title">
-                      <img src="cssClient/img/testimoianl1.png" alt="">
-                      <a href="#">Adam Levine <i class="ion-ios-minus-empty"></i>
-                        <span>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                        </span>
-                      </a>
-                    </span>
-
-                        </div>
-                        <div class="item">
-                            <p class="testimoinal-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                                Pellentesque  eueget ante venenatis euismod. Etiam in odio mattis, suscipit ex sit amet, toronil inoui bibenidum risus.
-                            </p>
-
-                            <span class="author-name-title">
-                      <img src="cssClient/img/testimoianl1.png" alt="">
-                      <a href="#">Adam Levine <i class="ion-ios-minus-empty"></i>
-                        <span>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                        </span>
-                      </a>
-                    </span>
                         </div>
                     </div>
                 </div>
