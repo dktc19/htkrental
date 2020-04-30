@@ -25,6 +25,7 @@ class ClientController extends Controller
         $product = Products::all();
         $typeproduct =TypeProducts::all();
         $location = Locations::all();
+
         return view('pages.homepage',['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location]);
     }
 
@@ -136,10 +137,11 @@ class ClientController extends Controller
     }
 
 
-    public function getListProduct(){
+    public function getListProduct( Request $request){
         $product= Products::orderBy('created_at','asc')->paginate(6);
         $typeproduct =TypeProducts::all();
-        return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct]);
+        $id_typeproduct= $request->id_typeproduct;
+        return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct,'id_typeproduct'=>$id_typeproduct]);
     }
 
     public function getListDetail($id){

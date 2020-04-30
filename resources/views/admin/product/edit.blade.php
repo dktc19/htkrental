@@ -46,13 +46,10 @@
                             @endif
                             <form  action="admin/product/edit/{{$product->id}}" method="POST" class="mb-5" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-
                                 <div class="form-group">
                                     <label>Location</label>
                                     <select name="idLocation" class="form-control">
-
                                         @foreach($Location as $lc)
-
                                             <option selected value="{{$lc->id}}">{{$lc-> name}}</option>
                                         @endforeach
                                     </select>
@@ -60,7 +57,6 @@
                                 <div class="form-group">
                                     <label>Type Product</label>
                                     <select name="idModel" class="form-control">
-
                                         @foreach($Typeproduct as $typ)
                                             <option selected value="{{$typ->id}}">{{$typ-> name}}</option>
                                         @endforeach
@@ -75,9 +71,9 @@
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="custom-file">
-                                        <label>Change Image Product</label>
+                                        <label>Change Image</label>
                                         <input type="file" name="image" class="custom-file-input" id="inputGroupFile01">
-                                        <label class="custom-file-label" for="inputGroupFile01">Choose Image Product</label>
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose Image</label>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>

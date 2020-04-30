@@ -125,7 +125,7 @@
 
                                         <img src="upload/image/image_product/{{$pd->image}}" alt="" style="width: 80px;height: 80px">
 
-                                    <span class="tittle">{{$pd->name}}</span>
+                                    <span class="tittle">{{$pd->title}}</span>
                                     <span class="car-des">
                                         @foreach($typeproduct as $tpd)
                                             @if($pd->idModel == $tpd->id)
