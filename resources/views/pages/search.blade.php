@@ -1,11 +1,5 @@
 @extends('layout.index')
-@section('content')
-{{--    @foreach($product as $pr)--}}
 
-{{--@if(($pr->status==0)&&($id_receivelc == $pr->idLocation))--}}
-{{--            {{$pr->title}}--}}
-{{--    @endif--}}
-{{--    @endforeach--}}
 @section('banner')
     <div class="inner-page-banner" style="background: url('upload/image/banner/banner-index1.jpg') top center no-repeat; background-size: cover;">
         <div class="rq-overlay"></div>
@@ -20,6 +14,7 @@
         </div>
     </div>
 @endsection
+@section('content')
 <div class="rq-page-content">
     <div class="rq-content-block gray-bg small-padding-top">
         <div class="container">

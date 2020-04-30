@@ -138,10 +138,12 @@ class ClientController extends Controller
 
 
     public function getListProduct( Request $request){
-        $product= Products::orderBy('created_at','asc')->paginate(6);
+        $product= Products::orderBy('created_at','asc')->get();
         $typeproduct =TypeProducts::all();
         $id_typeproduct= $request->id_typeproduct;
-        return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct,'id_typeproduct'=>$id_typeproduct]);
+        $price_min = $request->price_min;
+        $price_max = $request->price_max;
+        return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct,'id_typeproduct'=>$id_typeproduct,'price_min'=>$price_min,'price_max'=>$price_max]);
     }
 
     public function getListDetail(Request $request ,$id){
