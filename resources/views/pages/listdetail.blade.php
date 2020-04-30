@@ -140,12 +140,13 @@
 
                                         <div id="respond" class="comment-respond">
                                             <form id="commentform" class="commentform" action="comment/{{$product->id}}" method="POST">
+                                               <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <textarea class="comment-input"  placeholder="Here goes your review"></textarea>
+                                                        <textarea class="comment-input" name="description" placeholder="Here goes your review"></textarea>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <button class="continue-btn rq-btn rq-btn-normal">Submit Review</button>
+                                                        <button class="continue-btn rq-btn rq-btn-normal" name="submitereview">Submit Review</button>
                                                     </div>
                                                 </div>
                                             </form>

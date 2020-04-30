@@ -144,10 +144,11 @@ class ClientController extends Controller
         return view('pages.listproduct',['product'=>$product,'typeproduct'=>$typeproduct,'id_typeproduct'=>$id_typeproduct]);
     }
 
-    public function getListDetail($id){
+    public function getListDetail(Request $request ,$id){
         $product= Products::find($id);
         $review =Reviews::all();
         $user = User::all();
+
         return view('pages.listdetail',['product'=>$product,'review'=>$review,'user'=>$user]);
     }
 
@@ -155,11 +156,10 @@ class ClientController extends Controller
         $review = new Reviews;
         $review->idProduct= $id;
         $review->idUser = Auth::user()->id;
-        $review->Description = $request->contentcomment;
+        $review->Description = $request->description;
         $review->Rating= 0;
         $review->save();
-
-        return redirect("listdetail/".$id)->with('notice','Comment Success');
+        return redirect("listdetail/".$id);
     }
 
     public function getAbout(){
