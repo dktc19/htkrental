@@ -268,10 +268,10 @@
                                                             <li><i class="ion-star"></i></li>
                                                         </ul>
                                                         <ul>
-                                                            <li>Class: <span>Premium</span></li>
-                                                            <li>Air Condition: <span>Yes</span></li>
-                                                            <li>Body Style: <span>Sedan</span></li>
-                                                            <li>Transmission: <span>Automatic</span></li>
+                                                            <li>GroupSet: <span>{{$pr->groupset}}</span></li>
+                                                            <li>Cassette: <span>{{$pr->cassette}}</span></li>
+                                                            <li>Weight: <span>{{$pr->weight}}</span></li>
+                                                            <li>Size: <span>{{$pr->size}}</span></li>
                                                         </ul>
                                                         <div class="listing-footer">
                                                             <span><a href="listdetail/{{$pr->id}}">Details</a></span>
@@ -301,10 +301,10 @@
                                                     <li><i class="ion-star"></i></li>
                                                 </ul>
                                                 <ul>
-                                                    <li>Class: <span>Premium</span></li>
-                                                    <li>Air Condition: <span>Yes</span></li>
-                                                    <li>Body Style: <span>Sedan</span></li>
-                                                    <li>Transmission: <span>Automatic</span></li>
+                                                    <li>GroupSet: <span>{{$pr->groupset}}</span></li>
+                                                    <li>Cassette: <span>{{$pr->cassette}}</span></li>
+                                                    <li>Weight: <span>{{$pr->weight}}</span></li>
+                                                    <li>Size: <span>{{$pr->size}}</span></li>
                                                 </ul>
                                                 <div class="listing-footer">
                                                     <span><a href="listdetail/{{$pr->id}}">Details</a></span>

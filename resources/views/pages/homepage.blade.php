@@ -19,10 +19,21 @@
                         </select>
                     </div>
                 </div>
+{{--                <div class="rq-search-single">--}}
+{{--                    <div class="rq-search-content last-child">--}}
+{{--                        <span class="rq-search-heading">Name of Bike</span>--}}
+{{--                        <select name="id_name" class="category-option">--}}
+{{--                            <option selected disabled> Select the Location</option>--}}
+{{--                            @foreach($product as $pr)--}}
+{{--                                <option value="{{$pr->id}}">{{$pr-> title}}</option>--}}
+{{--                            @endforeach--}}
+{{--                        </select>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div class="rq-search">
                     <div>
-                        <span class="">Name</span><br>
-                        <input type="text" name="key" id="s" placeholder="Input key word..."/>
+                        <span class="rq-search-heading">Name</span><br>
+                        <input type="text" name="id_name" id="s" placeholder="Input key word..."/>
                     </div>
                 </div>
                 <div class="rq-search-single">

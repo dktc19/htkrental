@@ -9,6 +9,7 @@ use App\Reviews;
 use App\TypeProducts;
 
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -148,10 +149,12 @@ class ClientController extends Controller
 
     public function getListDetail(Request $request ,$id){
         $product= Products::find($id);
+
         $review =Reviews::all();
         $user = User::all();
+        $location =Locations::all();
 
-        return view('pages.listdetail',['product'=>$product,'review'=>$review,'user'=>$user]);
+        return view('pages.listdetail',['product'=>$product,'review'=>$review,'user'=>$user,'location'=>$location]);
     }
 
     public function postComment($id, Request $request){
@@ -200,11 +203,18 @@ class ClientController extends Controller
     }
 
     public function getSearch(Request $request){
-        $product= Products::where('title','like','%'.$request->key.'%')->paginate(6);
+//        $product= Products::where('title','like','%'.$request->id_name.'%')->get();
+        $product= Products::where('title','like','%'.$request->id_name.'%')->paginate(2);
         $id_receivelc = $request->id_receivelc;
         $location =Locations::all();
         $typeproduct = TypeProducts::all();
         $bookings = Bookings::all();
-        return view('pages.search',['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc,'bookings'=>$bookings]);
+
+
+        return view('pages.search',compact('product'),['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc,'bookings'=>$bookings]);
+
+
     }
+
+
 }
