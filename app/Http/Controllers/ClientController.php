@@ -23,7 +23,7 @@ class ClientController extends Controller
 
     public function getList()
     {
-        $product = Products::all();
+        $product = Products::orderBy('created_at', 'desc')->take(5)->get();
         $typeproduct =TypeProducts::all();
         $location = Locations::all();
 
@@ -210,10 +210,7 @@ class ClientController extends Controller
         $typeproduct = TypeProducts::all();
         $bookings = Bookings::all();
 
-
         return view('pages.search',compact('product'),['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc,'bookings'=>$bookings]);
-
-
     }
 
 

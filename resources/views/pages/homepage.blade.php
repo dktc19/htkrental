@@ -111,8 +111,8 @@
                 </div>
             </div>
             <div class="rq-browse-section">
-                <h1 class="rq-title">Top Our Cars<span class="rq-dot">.</span></h1>
-                <a href="#">Browse All Car <i class="ion-ios-arrow-right"></i></a>
+                <h1 class="rq-title">Top Our Bikes<span class="rq-dot">.</span></h1>
+                <a href="listproduct">Browse All Bike <i class="ion-ios-arrow-right"></i></a>
             </div>
         </div>
     </div> <!-- /.content block -->
@@ -123,8 +123,6 @@
                     <a href="#top-popular"  role="tab" data-toggle="tab">Top Popular</a></li>
                 <li role="presentation">
                     <a href="#new-cars"  role="tab" data-toggle="tab">New Cars</a></li>
-                <li role="presentation">
-                    <a href="#sale-off"  role="tab" data-toggle="tab">Sale Off</a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="top-popular">
@@ -132,10 +130,8 @@
                         <ul class="nav nav-tabs" role="tablist">
                             @foreach($product as $pd)
                             <li role="presentation" class="active">
-                                <a href="#"  role="tab" data-toggle="tab">
-
-                                        <img src="upload/image/image_product/{{$pd->image}}" alt="" style="width: 80px;height: 80px">
-
+                                <a href="listdetail/{{$pd->id}}">
+                                    <img src="upload/image/image_product/{{$pd->image}}" alt="" style="width: 80px;height: 80px">
                                     <span class="tittle">{{$pd->title}}</span>
                                     <span class="car-des">
                                         @foreach($typeproduct as $tpd)
@@ -502,51 +498,51 @@
                     <div class="partner-single"><a href="#"><img src="cssClient/img/partner-logo/partner5.png" alt=""></a></div>
                 </div>
             </div> <!-- /.rq-partners-section -->
-            <div class="rq-testimonial-section">
-                <div class="rq-testimonial-content">
-                    <h1 class="rq-title">What Client Say<span class="rq-dot">.</span></h1>
-                    <div class=" owl-carousel testimonial-wrapper">
-                        <div class="item">
-                            <p class="testimoinal-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                                Pellentesque  eueget ante venenatis euismod. Etiam in odio mattis, suscipit ex sit amet, toronil inoui bibenidum risus.
+{{--            <div class="rq-testimonial-section">--}}
+{{--                <div class="rq-testimonial-content">--}}
+{{--                    <h1 class="rq-title">What Client Say<span class="rq-dot">.</span></h1>--}}
+{{--                    <div class=" owl-carousel testimonial-wrapper">--}}
+{{--                        <div class="item">--}}
+{{--                            <p class="testimoinal-text">--}}
+{{--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>--}}
+{{--                                Pellentesque  eueget ante venenatis euismod. Etiam in odio mattis, suscipit ex sit amet, toronil inoui bibenidum risus.--}}
 
-                            </p>
-                            <span class="author-name-title">
-                      <img src="cssClient/img/testimoianl1.png" alt="">
-                      <a href="#">Adam Levine <i class="ion-ios-minus-empty"></i>
-                        <span>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                        </span>
-                      </a>
-                    </span>
+{{--                            </p>--}}
+{{--                            <span class="author-name-title">--}}
+{{--                      <img src="cssClient/img/testimoianl1.png" alt="">--}}
+{{--                      <a href="#">Adam Levine <i class="ion-ios-minus-empty"></i>--}}
+{{--                        <span>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                        </span>--}}
+{{--                      </a>--}}
+{{--                    </span>--}}
 
-                        </div>
-                        <div class="item">
-                            <p class="testimoinal-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                            </p>
-                            <span class="author-name-title">
-                      <img src="cssClient/img/testimoianl1.png" alt="">
-                      <a href="#">Adam Levine <i class="ion-ios-minus-empty"></i>
-                        <span>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                          <i class="ion-android-star"></i>
-                        </span>
-                      </a>
-                    </span>
+{{--                        </div>--}}
+{{--                        <div class="item">--}}
+{{--                            <p class="testimoinal-text">--}}
+{{--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>--}}
+{{--                            </p>--}}
+{{--                            <span class="author-name-title">--}}
+{{--                      <img src="cssClient/img/testimoianl1.png" alt="">--}}
+{{--                      <a href="#">Adam Levine <i class="ion-ios-minus-empty"></i>--}}
+{{--                        <span>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                          <i class="ion-android-star"></i>--}}
+{{--                        </span>--}}
+{{--                      </a>--}}
+{{--                    </span>--}}
 
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /.testimonial section -->
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div> <!-- /.testimonial section -->--}}
 
             <div class="rq-tips-tricks">
                 <h1 class="rq-title">Tips &amp; Tricks<span class="rq-dot"></span></h1>
@@ -593,7 +589,7 @@
     </div> <!-- /.content block -->
     <div class="rq-call-to-action">
         <div class="container">
-            <h2>Need help renting online? <span>(855) 962-3621</span></h2>
+            <h2>Need help renting online? <span>(+84) 372-579-483</span></h2>
         </div>
     </div>
 </div> <!-- /.page-content -->
