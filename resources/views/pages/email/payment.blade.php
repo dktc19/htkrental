@@ -462,9 +462,10 @@
 
                             <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;">
                                 <div style="mso-line-height-rule: exactly;mso-text-raise: 11px;vertical-align: middle;">
-                                    <h1 style="Margin-top: 0;Margin-bottom: 20px;font-style: normal;font-weight: normal;color: #404040;font-size: 28px;line-height: 36px;text-align: center;">Do you want to Active Email?</h1>
+                                    <h1 style="Margin-top: 0;Margin-bottom: 20px;font-style: normal;font-weight: normal;color: #404040;font-size: 28px;line-height: 36px;text-align: center;">Hi, We are from HTK rental, This is the payment for your bill. If you do not pay within 24 hours. Your Booking will be canceled.</h1>
                                 </div>
                             </div>
+
 
                             <div style="Margin-left: 20px;Margin-right: 20px;">
                                 <div style="mso-line-height-rule: exactly;line-height: 10px;font-size: 1px;">&nbsp;</div>
@@ -482,7 +483,7 @@
 
                             <div style="Margin-left: 20px;Margin-right: 20px;">
                                 <div style="mso-line-height-rule: exactly;mso-text-raise: 11px;vertical-align: middle;">
-                                    <center><h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Please verify your email to receive a discount...</h2></center>
+                                    <h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;"> Click to below to payment for your bill</h2>
                                 </div>
                             </div>
 
@@ -492,7 +493,7 @@
 
                             <div style="Margin-left: 20px;Margin-right: 20px;Margin-bottom: 24px;">
                                 <div class="btn btn--flat btn--large" style="text-align:center;">
-                                    <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #efa80f;font-family: Open Sans, sans-serif;" href="http://localhost:8080/FinalPJ/public/email/active/{{$id}}">Active Email</a><![endif]>
+                                    <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #efa80f;font-family: Open Sans, sans-serif;" href="http://localhost:8080/FinalPJ/public/email/active/{{$id}}">Payment to Your Order</a><![endif]>
                                     <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://test.com" style="width:134px" arcsize="9%" fillcolor="#E45D6B" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:Open Sans,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">Active Email</center></v:textbox></v:roundrect><![endif]--></div>
                             </div>
 

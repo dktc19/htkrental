@@ -271,8 +271,22 @@ class ClientController extends Controller
 
     public function getProcessingbooking($id){
         $booking = Bookings::find($id);
+        $user=  User::all();
         $booking->status = 1;
         $booking->save();
+        foreach ($user as $us){
+            if($booking->idUser == $us->id){
+                $emailUser = $us->email;
+            }
+}
+        Mail::send('pages.email.payment',[
+            'id'=>$id],function ($message)use ($emailUser){
+            $message->to($emailUser,'Visitors')->subject('Please perform payment');
+        });
+
         return redirect('processing')->with('notice','Perform Booking Success');
+    }
+    public function getPaymentSuccess(){
+        return view('pages.email.paymentsuccess');
     }
 }

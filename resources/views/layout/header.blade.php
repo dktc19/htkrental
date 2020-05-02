@@ -63,6 +63,14 @@
                                         <li>
                                             <a href="admin/home/view" ><i class="fa fa-user" style="font-size:14px"></i>&nbsp;&nbsp;Admin Site </a>
                                         </li>
+                                        <li>
+                                            <a href="processing" ><i style="font-size:14px"></i>&nbsp;&nbsp;Go to Processing site </a>
+                                        </li>
+                                    @endif
+                                    @if($user_account->idRole ==3)
+                                        <li>
+                                            <a href="processing" ><i style="font-size:14px"></i>&nbsp;&nbsp;Go to Processing site </a>
+                                        </li>
                                     @endif
                                     <li><a href="logout"><i class="fa fa-sign-out" style="font-size:16px"></i>&nbsp;&nbsp;Logout</a></li>
                                 </ul>

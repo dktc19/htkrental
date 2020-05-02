@@ -131,6 +131,8 @@ Route::group(['prefix'=>'admin','middleware'=>'adminValidate'],function (){
 Route::group(['prefix'=> 'email'],function (){
     Route::get('active/{id}','ClientController@getActiveSuccess');
 
+    Route::get('paymentsuccess','ClientController@getPaymentSuccess');
+
 });
 
     Route::get('user','ClientController@getUser');
