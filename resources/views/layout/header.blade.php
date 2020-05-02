@@ -40,25 +40,8 @@
                                 <li><a href="listproduct" style="font-size:90%;">List All Bike</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="blog-listing.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Blog <span class="ion-chevron-down"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-listing.html">Blog Listing</a></li>
-                                <li><a href="post-single.html">Blog Post</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false" style="font-size:120%;">Page <span class="ion-chevron-down"></span></a>
-                            <ul class="dropdown-menu" >
-                                <li><a href="about" style="font-size:90%;">About Us</a></li>
-                                <li><a href="contact-us.html">Contact us</a></li>
-
-                                <li><a href="shopping-cart.html">shopping cart</a></li>
-                                <li><a href="login" style="font-size:90%;">Registration</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="about" style="font-size:110%;">About Us</a></li>
+                        <li><a href="contact-us.html" style="font-size:110%;">Contact us</a></li>
 
                     </ul>
 
@@ -66,9 +49,10 @@
 
 <ul class="nav navbar-nav navbar-right">
                         @if(!isset($user_account))
-                        <li class="login-register-link right-side-link"><a href="login">
-                                <i class="icon_lock-open_alt" style="font-size:120%;"></i>Login</a>
+                        <li class="login-register-link right-side-link"><a href="login" style="font-size:100%;">
+                                <i class="icon_lock-open_alt" ></i>Login/Register</a>
                         </li>
+
                         @else
                             <li class="dropdown">
                                 <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -83,9 +67,8 @@
                                     <li><a href="logout"><i class="fa fa-sign-out" style="font-size:16px"></i>&nbsp;&nbsp;Logout</a></li>
                                 </ul>
                             </li>
-
                         @endif
-                            <li><a href="checkout/{id}" style="font-size:14px">Checkout</a></li>
+                            <li><a href="checkout/{id}" style="font-size:100%">Checkout</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->

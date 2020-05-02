@@ -44,8 +44,8 @@
                                 <div class="contact-single" >
                                     <i class="icon_pin"></i>
                                     <p style="font-size:130%;">HCM: 70/9/1 Le Van Tho, P.11, Q.Go Vap, TP.HCM, VietNam</p>
-                                    <p style="font-size:130%;">24A, lane 81, Lac Long Quan, Hanoi, Vietnam</p>
-                                    <p style="font-size:130%;">42 Dang Thai Mai, Thac Gian, Thanh Khe, Da Nang, VietNam</p>
+                                    <p style="font-size:130%;">HaNoi: 24A, lane 81, Lac Long Quan, Hanoi, Vietnam</p>
+                                    <p style="font-size:130%;">DaNang: 42 Dang Thai Mai, Thac Gian, Thanh Khe, Da Nang, VietNam</p>
                                 </div>
                                 <div class="contact-single">
                                     <i class="icon_mail_alt"></i>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="contact-single">
                                     <i class="icon_phone"></i>
-                                    <p style="font-size:130%;">+84 372579483</p>
+                                    <p style="font-size:130%;">(+84) 372579483</p>
                                 </div>
                                 <div class="opening-hour">
                                     <p style="font-size:130%;"> HOUR WORK:  <span> MONDAY - FRIDAY  /  08AM - 05PM</span></p>

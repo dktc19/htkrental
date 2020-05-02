@@ -8,26 +8,26 @@
     <base href="{{asset('')}}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="cssAdmin/font/iconsmind-s/css/iconsminds.css" />
-    <link rel="stylesheet" href="cssAdmin/font/simple-line-icons/css/simple-line-icons.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap.rtl.only.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/fullcalendar.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/dataTables.bootstrap4.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/datatables.responsive.bootstrap4.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/select2.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/glide.core.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap-stars.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/nouislider.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap-datepicker3.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/vendor/component-custom-switch.min.css" />
-    <link rel="stylesheet" href="cssAdmin/css/main.css" />
-    <link rel="icon" href="cssAdmin/img/icon.png"/>
+    @if(View::hasSection('header'))
+        @yield('header')
+    @else
+        <link rel="stylesheet" href="cssAdmin/font/iconsmind-s/css/iconsminds.css"/>
+        <link rel="stylesheet" href="cssAdmin/font/simple-line-icons/css/simple-line-icons.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap.rtl.only.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/fullcalendar.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/dataTables.bootstrap4.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/datatables.responsive.bootstrap4.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/select2.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/perfect-scrollbar.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/glide.core.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap-stars.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/nouislider.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap-datepicker3.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/vendor/component-custom-switch.min.css"/>
+        <link rel="stylesheet" href="cssAdmin/css/main.css"/>
+        <link rel="icon" href="cssAdmin/img/icon.png"/>
+    @endif
 </head>
 
 <body id="app-container" class="menu-default show-spinner">
@@ -61,26 +61,28 @@
     </div>
 </footer>
 
-<script src="cssAdmin/js/vendor/jquery-3.3.1.min.js"></script>
+@if(View::hasSection('script'))
+    @yield('script')
+@else
+    <script src="cssAdmin/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="cssAdmin/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="cssAdmin/js/vendor/Chart.bundle.min.js"></script>
+    <script src="cssAdmin/js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="cssAdmin/js/vendor/moment.min.js"></script>
+    <script src="cssAdmin/js/vendor/fullcalendar.min.js"></script>
+    {{--<script src="cssAdmin/js/vendor/datatables.min.js"></script>--}}
+    <script src="cssAdmin/js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="cssAdmin/js/vendor/progressbar.min.js"></script>
+    <script src="cssAdmin/js/vendor/jquery.barrating.min.js"></script>
+    <script src="cssAdmin/js/vendor/select2.full.js"></script>
+    <script src="cssAdmin/js/vendor/nouislider.min.js"></script>
+    <script src="cssAdmin/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="cssAdmin/js/vendor/Sortable.js"></script>
+    <script src="cssAdmin/js/vendor/mousetrap.min.js"></script>
+    <script src="cssAdmin/js/vendor/glide.min.js"></script>
+    <script src="cssAdmin/js/dore.script.js"></script>
+    <script src="cssAdmin/js/scripts.js"></script>
+@endif
 
-<script src="cssAdmin/js/vendor/bootstrap.bundle.min.js"></script>
-<script src="cssAdmin/js/vendor/Chart.bundle.min.js"></script>
-<script src="cssAdmin/js/vendor/chartjs-plugin-datalabels.js"></script>
-<script src="cssAdmin/js/vendor/moment.min.js"></script>
-<script src="cssAdmin/js/vendor/fullcalendar.min.js"></script>
-{{--<script src="cssAdmin/js/vendor/datatables.min.js"></script>--}}
-<script src="cssAdmin/js/vendor/perfect-scrollbar.min.js"></script>
-<script src="cssAdmin/js/vendor/progressbar.min.js"></script>
-<script src="cssAdmin/js/vendor/jquery.barrating.min.js"></script>
-<script src="cssAdmin/js/vendor/select2.full.js"></script>
-<script src="cssAdmin/js/vendor/nouislider.min.js"></script>
-<script src="cssAdmin/js/vendor/bootstrap-datepicker.js"></script>
-<script src="cssAdmin/js/vendor/Sortable.js"></script>
-<script src="cssAdmin/js/vendor/mousetrap.min.js"></script>
-<script src="cssAdmin/js/vendor/glide.min.js"></script>
-<script src="cssAdmin/js/dore.script.js"></script>
-<script src="cssAdmin/js/scripts.js"></script>
-
-@yield('script')
 </body>
 </html>

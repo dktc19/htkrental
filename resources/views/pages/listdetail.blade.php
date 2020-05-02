@@ -114,13 +114,6 @@
                                         @endif
                                         <div class="review-form">
                                             <h4>Write your review</h4>
-                                            {{--                                        <div class="review-star">--}}
-                                            {{--                                            <a href="#"><i class="ion-android-star checked"></i></a>--}}
-                                            {{--                                            <a href="#"><i class="ion-android-star checked"></i></a>--}}
-                                            {{--                                            <a href="#"><i class="ion-android-star checked"></i></a>--}}
-                                            {{--                                            <a href="#"><i class="ion-android-star checked"></i></a>--}}
-                                            {{--                                            <a href="#"><i class="ion-android-star "></i></a>--}}
-                                            {{--                                        </div>--}}
                                             <div id="respond" class="comment-respond">
                                                 <form id="commentform" class="commentform"
                                                       action="comment/{{$product->id}}" method="POST">
@@ -188,7 +181,7 @@
                                 </div>
                                 <div class="rq-search-single" style="width: 300px">
                                     <div class="rq-search-content">
-                                        <span class="rq-search-heading">Pick up</span>
+                                        <span class="rq-search-heading">Pick up Date</span>
                                         <input type="text" name="pickupDate" class="rq-form-element datepicker"
                                                id="startdate" placeholder="Pick up date"/>
                                         <i class="ion-chevron-down datepicker-arrow"></i>
@@ -196,7 +189,7 @@
                                 </div>
                                 <div class="rq-search-single" style="width: 300px">
                                     <div class="rq-search-content">
-                                        <span class="rq-search-heading">Return</span>
+                                        <span class="rq-search-heading">Return Date</span>
                                         <input type="text" name="returnDate" class="rq-form-element" id="enddate"
                                                placeholder="Return date"/>
                                         <i class="ion-chevron-down datepicker-arrow"></i>
@@ -211,7 +204,7 @@
                             <div class="row">
                                 <br><br>
                                 <div class="col-md-12">
-                                    <h3 class="total-price">Total Booking Cost : <span>{{$product->daily_price}} $</span></h3>
+                                    <h3 class="total-price">Price/Day : <span>{{$product->daily_price}} $</span></h3>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="book-btn">

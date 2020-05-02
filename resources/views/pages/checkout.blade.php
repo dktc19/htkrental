@@ -104,9 +104,9 @@
                                                             <thead>
                                                             <tr class="table-head">
                                                                 <th>CAR NAME</th>
-                                                                <th>PRICE</th>
+                                                                <th>PRICE/Day</th>
                                                                 <th>Date of hire</th>
-                                                                <th>TOTAL</th>
+                                                                <th>TOTAL Price</th>
                                                                 <th></th>
                                                             </tr>
                                                             </thead>

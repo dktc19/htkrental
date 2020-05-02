@@ -1,89 +1,139 @@
 @extends('admin.layout.index')
+@section('header')
+    <link rel="stylesheet" href="cssAdmin/font/iconsmind-s/css/iconsminds.css"/>
+    <link rel="stylesheet" href="cssAdmin/font/simple-line-icons/css/simple-line-icons.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/vendor/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/vendor/datatables.responsive.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/vendor/bootstrap.rtl.only.min.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/vendor/perfect-scrollbar.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/vendor/component-custom-switch.min.css"/>
+    <link rel="stylesheet" href="cssAdmin/css/main.css"/>
+@endsection
+
 @section('content')
 
-    <body class="sb-nav-fixed">
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid">
-                    <h1 class="mt-4">Tables</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="admin.layout.index">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Tables</li>
-                    </ol>
-                    <div class="card mb-4">
-                        <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Example</div>
-                        <div class="card-body">
-                            @if(session('notice'))
-                                <div class="alert alert-success">
-                                    {{session('notice')}}
-                                </div>
-                            @endif
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th>Name of User</th>
-                                        <th>Pick up Location</th>
-{{--                                        <th>Payment</th>--}}
-                                        <th>pickupDay</th>
-                                        <th>dropDay</th>
-                                        <th>Drop Location</th>
-                                        <th>Created At</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    </thead>
-                                    @foreach($booking as $bk)
-                                        <tr>
-                                            @foreach($user as $us)
-                                                @if($bk->idUser == $us->id)
-                                                    <td>{{$us->name}}</td>
-                                                @endif
-                                            @endforeach
-                                            @foreach($location as $lc)
-                                                @if($bk->idLocation == $lc->id)
-                                                    <td>{{$lc->name}}</td>
-                                                @endif
-                                            @endforeach
-{{--                                            @foreach($paymenttype as $tmp)--}}
-{{--                                                @if($bk->idUPayment == $tmp->id)--}}
-{{--                                                    <td>{{$tmp->name}}</td>--}}
-{{--                                                @endif--}}
-{{--                                            @endforeach--}}
-                                            <td>{{$bk->pickupDay}}</td>
-                                            <td>{{$bk->dropDay}}</td>
-                                            @foreach($location as $lc)
-                                                @if($bk->idLocation == $lc->id)
-                                                    <td>{{$lc->name}}</td>
-                                                @endif
-                                            @endforeach
-                                            <td>{{$bk-> created_at}}</td>
-                                            <td>
-                                                <a href="admin/booking/edit/{{$bk -> id}}"
-                                                   class="btn btn-sm btn-outline-primary">Edit</a>
-                                                <a href="admin/booking/delete/{{$bk -> id}}"
-                                                   class="btn btn-sm btn-outline-danger">Delete</a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </table>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Datatables Default</h1>
+                    <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                        <ol class="breadcrumb pt-0">
+                            <li class="breadcrumb-item">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">Library</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <div class="separator mb-5"></div>
+                </div>
+            </div>
 
-                            </div>
+            <div class="row mb-4">
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="data-table data-table-feature">
+                                <thead>
+                                <tr>
+                                    <th>Name of User</th>
+                                    <th>Pick up Location</th>
+                                    {{--                                        <th>Payment</th>--}}
+                                    <th>pickupDay</th>
+                                    <th>dropDay</th>
+                                    <th>Drop Location</th>
+                                    <th>Created At</th>
+                                    <th>Action</th>
+
+                                </tr>
+                                </thead>
+                                @foreach($booking as $bk)
+                                    <tr>
+                                        @foreach($user as $us)
+                                            @if($bk->idUser == $us->id)
+                                                <td>{{$us->name}}</td>
+                                            @endif
+                                        @endforeach
+                                        @foreach($location as $lc)
+                                            @if($bk->idLocation == $lc->id)
+                                                <td>{{$lc->name}}</td>
+                                            @endif
+                                        @endforeach
+                                        {{--                                            @foreach($paymenttype as $tmp)--}}
+                                        {{--                                                @if($bk->idUPayment == $tmp->id)--}}
+                                        {{--                                                    <td>{{$tmp->name}}</td>--}}
+                                        {{--                                                @endif--}}
+                                        {{--                                            @endforeach--}}
+                                        <td>{{$bk->pickupDay}}</td>
+                                        <td>{{$bk->dropDay}}</td>
+                                        @foreach($location as $lc)
+                                            @if($bk->idLocation == $lc->id)
+                                                <td>{{$lc->name}}</td>
+                                            @endif
+                                        @endforeach
+                                        <td>{{$bk-> created_at}}</td>
+                                        <td>
+                                            <a href="admin/booking/edit/{{$bk -> id}}"
+                                               class="btn btn-sm btn-outline-primary">Perform</a>
+                                            <a href="admin/booking/delete/{{$bk -> id}}"
+                                               class="btn btn-sm btn-outline-danger">Cancel</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </table>
                         </div>
                     </div>
                 </div>
-            </main>
-
+            </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="cssAdmin/assets/demo/datatables-demo.js"></script>
-    </body>
+    </main>
 
+@endsection
 
+@section('script')
+    <script src="cssAdmin/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="cssAdmin/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="cssAdmin/js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="cssAdmin/js/vendor/datatables.min.js"></script>
+    <script src="cssAdmin/js/dore.script.js"></script>
+    <script src="cssAdmin/js/scripts.js"></script>
+    <script>
+        $.fn.dataTable.ext.errMode = 'none';
+        $(".data-table-feature").DataTable({
+            sDom: '<"row view-filter"<"col-sm-12"<"float-right"l><"float-left"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
+            "columns": [
+                {"data": "name"},
+                {"data": "pickuplocation"},
+                {"data": "pickupDay"},
+                {"data": "dropDay"},
+                {"data": "Droplocation"},
+                {"data": "Create_at"},
+                {"data": "Action"},
+
+            ],
+            drawCallback: function () {
+                $($(".dataTables_wrapper .pagination li:first-of-type"))
+                    .find("a")
+                    .addClass("prev");
+                $($(".dataTables_wrapper .pagination li:last-of-type"))
+                    .find("a")
+                    .addClass("next");
+
+                $(".dataTables_wrapper .pagination").addClass("pagination-sm");
+            },
+            language: {
+                paginate: {
+                    previous: "<i class='simple-icon-arrow-left'></i>",
+                    next: "<i class='simple-icon-arrow-right'></i>"
+                },
+                search: "_INPUT_",
+                searchPlaceholder: "Search...",
+                lengthMenu: "Items Per Page _MENU_"
+            },
+        });
+    </script>
 @endsection

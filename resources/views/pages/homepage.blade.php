@@ -516,47 +516,6 @@
 {{--                </div>--}}
 {{--            </div> <!-- /.testimonial section -->--}}
 
-            <div class="rq-tips-tricks">
-                <h1 class="rq-title">Tips &amp; Tricks<span class="rq-dot"></span></h1>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="rq-tips-single wow fadeInLeft" data-wow-duration="500ms">
-                            <div class="image-container">
-                                <img src="cssClient/img/tips/tips1.jpg" alt="">
-                            </div>
-                            <div class="tips-content">
-                                <span class="date">March, 24th, 2016</span>
-                                <h4><a href="#">Rent A Car So Easiest With A Few Minutes From Turbo</a></h4>
-                                <a class="rq-btn rq-btn-normal continue-button" href="#">Continue Reading <i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="rq-tips-single wow fadeInUp" data-wow-duration="500ms">
-                            <div class="image-container">
-                                <img src="cssClient/img/tips/tips2.jpg" alt="">
-                            </div>
-                            <div class="tips-content">
-                                <span class="date">March, 15th, 2016</span>
-                                <h4><a href="#">Experience awesome travel on Mazda of Selena</a></h4>
-                                <a class="rq-btn rq-btn-normal continue-button" href="#">Continue Reading <i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="rq-tips-single wow fadeInRight" data-wow-duration="500ms">
-                            <div class="image-container">
-                                <img src="cssClient/img/tips/tips3.jpg" alt="">
-                            </div>
-                            <div class="tips-content">
-                                <span class="date">February, 08th, 2016</span>
-                                <h4><a href="#">Have A Great Pinic On Moutain With Your Family In Last Week</a></h4>
-                                <a class="rq-btn rq-btn-normal continue-button" href="#">Continue Reading <i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div> <!-- /.content block -->
     <div class="rq-call-to-action">

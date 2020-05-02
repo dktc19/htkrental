@@ -247,6 +247,12 @@ class ClientController extends Controller
         $booking->idUser=Auth::user()->id;
         $booking->save();
 
+        $idUser=Auth::user()->id;
+        $User=User::find($idUser);
+        $User->address = $request->address;
+        $User->phone = $request->phone;
+        $User->save();
+
        return redirect("checkout/".$id)->with('notice','Booking Successfully');
     }
 
