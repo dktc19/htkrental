@@ -41,7 +41,7 @@
                             </ul>
                         </li>
                         <li><a href="about" style="font-size:110%;">About Us</a></li>
-                        <li><a href="contact-us.html" style="font-size:110%;">Contact us</a></li>
+                        <li><a href="contactus" style="font-size:110%;">Contact us</a></li>
 
                     </ul>
 

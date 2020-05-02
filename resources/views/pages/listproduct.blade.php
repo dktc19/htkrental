@@ -47,7 +47,6 @@
                                         Class <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
-
                                         <li>
                         <span class="rq-checkbox">
                           <input type="checkbox" id="class-a">

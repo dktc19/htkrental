@@ -21,24 +21,10 @@
                 </div>
                 <div class="rq-search" style="width: 400px">
                     <div>
-                        <span class="rq-search-heading">Name</span><br>
-                        <input type="text" name="id_name" id="s" placeholder="Input key word..." style="width: 100%"/>
+                        <span class="rq-search-heading" style="color: #efa80f">Name</span><br>
+                        <input type="text" name="id_name" id="s" placeholder="Input key word..." style="width: 100%; border: white"/>
                     </div>
                 </div>
-{{--                <div class="rq-search-single">--}}
-{{--                    <div class="rq-search-content">--}}
-{{--                        <span class="rq-search-heading">Pick up</span>--}}
-{{--                        <input type="text" name="id_startdate" class="rq-form-element datepicker" id="startdate" placeholder="Pick up date"/>--}}
-{{--                        <i class="ion-chevron-down datepicker-arrow"></i>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="rq-search-single">--}}
-{{--                    <div class="rq-search-content">--}}
-{{--                        <span class="rq-search-heading">Return</span>--}}
-{{--                        <input type="text" name="id_enddate" class="rq-form-element" id="enddate" placeholder="Return date"/>--}}
-{{--                        <i class="ion-chevron-down datepicker-arrow"></i>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
                 <div class="rq-search-single search-btn" style="width: 400px">
                     <div class="rq-search-content">
                         <button class="rq-btn rq-btn-primary fluid-btn" >Search <i class="arrow_right"></i></button>
@@ -67,15 +53,13 @@
                                         id hendrerit tellus turpis biben dum exilon Morbi cursus justo ut malesuada tempus.
                                     </p>
                                     <address>
-                                        <a href="#">Brasion Mike</a>
+                                        <a href="#">Ha Tuan Kiet</a>
                                         <cite>- CEO Founder</cite>
                                     </address>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="mission-image">
-                                    <img src="cssClient/img/block-transparent-img.png" alt="">
-                                </div>
+                                    <img src="upload/image/banner/banner-small.jpg" alt="" style="height:450px;width:450px">
                             </div>
                         </div>
 
@@ -119,19 +103,14 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="car-one">
                                 <div class="rq-tab-car-details">
-                                    <div class="car-logo">
-                                        <img src="cssClient/img/partner-logo/partner3.png" alt="">
-                                    </div>
-                                    <h3>Lamborghini Aventado</h3>
-                                    <div class="large-image-wrapper">
-                                        <div class="image-bg"></div>
-                                        <img src="cssClient/img/tab-image/full-img1.png" alt="">
-                                    </div>
+                                    <h3>Road Bike 2019</h3>
+                                        <img src="upload/image/image_product/roadbike.jpg" alt="" style="width: 300px;height: 300px">
+
                                     <div class="car-details-option">
-                                        <span><i class="ion-briefcase"></i>2 large bags</span>
-                                        <span><i class="ion-no-smoking"></i>No smoking</span>
-                                        <span><i class="ion-speedometer"></i>08/12 mpg</span>
-                                        <span>Starting at <span class="red-section">$39.0</span>/day</span>
+                                        <span><i class="ion-briefcase"></i>Group Set: Shimano Alivio 24-speed</span>
+                                        <span><i class="ion-no-smoking"></i>Cassete:  HG Cassette 11-32 T, 8-speed</span>
+                                        <span><i class="ion-speedometer"></i>Weight: Nominal weight 12 kg</span>
+                                        <span class="red-section">Size: M</span>
                                     </div>
                                 </div> <!-- /.rq-tab-car-details -->
                             </div>

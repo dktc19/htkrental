@@ -50,7 +50,7 @@
                                 @foreach($review as $rv)
                                     <tr>
                                         @foreach($user as $us)
-                                            @if($rv->idUser == $us->id)
+                                            @if($us->id == $rv->idUser)
                                         <td>{{$us->name}}</td>
                                             @endif
                                         @endforeach

@@ -103,7 +103,7 @@ class ClientController extends Controller
     }
 
     public function getUser(){
-        return view('pages.user');
+        return view('pages.user',[]);
     }
 
    public function postUser(Request $request){
@@ -136,7 +136,7 @@ class ClientController extends Controller
         $user->DateofBirth= $request->DateofBirth;
 
         $user->save();
-
+       return redirect('user')->with('notice','Edit Profile Success');
     }
 
 
@@ -256,4 +256,23 @@ class ClientController extends Controller
        return redirect("checkout/".$id)->with('notice','Booking Successfully');
     }
 
+    public function getProcessing(){
+        $booking = Bookings::all();
+        $user = User::all();
+        $location =Locations::all();
+        $product = Products::all();
+        return view('pages.processing',['booking'=>$booking,'user'=>$user,'location'=>$location,'product'=>$product]);
+    }
+    public function getDelete($id){
+        $booking = Bookings::find($id);
+        $booking->delete();
+        return redirect('processing')->with('notice','Cancel Booking Success');
+    }
+
+    public function getProcessingbooking($id){
+        $booking = Bookings::find($id);
+        $booking->status = 1;
+        $booking->save();
+        return redirect('processing')->with('notice','Perform Booking Success');
+    }
 }

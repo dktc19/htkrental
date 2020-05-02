@@ -151,5 +151,11 @@ Route::group(['prefix'=> 'email'],function (){
     Route::get('checkout/{id}','ClientController@getCheckout');
     Route::post('checkout/{id}','ClientController@postCheckout');
 
+    Route::get('processing','ClientController@getProcessing');
+    Route::get('processingDelete/{id}','ClientController@getDelete');
+    Route::get('processingBooking/{id}','ClientController@getProcessingbooking');
+
+
+
 
 
