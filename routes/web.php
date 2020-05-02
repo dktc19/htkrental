@@ -148,7 +148,8 @@ Route::group(['prefix'=> 'email'],function (){
 
     Route::get('search','ClientController@getSearch');
 
-
+    Route::get('checkout/{id}','ClientController@getCheckout');
+    Route::post('checkout/{id}','ClientController@postCheckout');
 
 
 

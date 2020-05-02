@@ -155,6 +155,7 @@
                     </div>
                 </div>
             </div> <!-- .end rq-content-block -->
+        <form method="GET" action="checkout/{{$product->id}}">
             <div class="rq-content-block gray-bg">
                 <div class="container">
                     <div class="listing-page-title">
@@ -163,10 +164,10 @@
                     <div class="rq-car-booking-section">
                         <div class="car-search">
                             <div class="rq-search-container">
-                                <div class="rq-search-single" style="width: 400px">
+                                <div class="rq-search-single" style="width: 300px">
                                     <div class="rq-search-content">
-                                        <span class="rq-search-heading">Location</span>
-                                        <select name="categories" class="category-option">
+                                        <span class="rq-search-heading">Pick up Location</span>
+                                        <select name="pickupLocation" class="category-option">
                                             <option selected disabled> Select the Location</option>
                                             @foreach($location as $lc)
                                                 <option value="{{$lc->id}}">{{$lc-> name}}</option>
@@ -174,24 +175,37 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="rq-search-single" style="width: 400px">
+                                <div class="rq-search-single" style="width: 300px">
+                                    <div class="rq-search-content">
+                                        <span class="rq-search-heading">Drop off Location</span>
+                                        <select name="dropLocation" class="category-option">
+                                            <option selected disabled> Select the Location</option>
+                                            @foreach($location as $lc)
+                                                <option value="{{$lc->id}}">{{$lc-> name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="rq-search-single" style="width: 300px">
                                     <div class="rq-search-content">
                                         <span class="rq-search-heading">Pick up</span>
-                                        <input type="text" name="datefilter" class="rq-form-element datepicker"
+                                        <input type="text" name="pickupDate" class="rq-form-element datepicker"
                                                id="startdate" placeholder="Pick up date"/>
                                         <i class="ion-chevron-down datepicker-arrow"></i>
                                     </div>
                                 </div>
-                                <div class="rq-search-single" style="width: 400px">
+                                <div class="rq-search-single" style="width: 300px">
                                     <div class="rq-search-content">
                                         <span class="rq-search-heading">Return</span>
-                                        <input type="text" name="datefilter" class="rq-form-element" id="enddate"
+                                        <input type="text" name="returnDate" class="rq-form-element" id="enddate"
                                                placeholder="Return date"/>
                                         <i class="ion-chevron-down datepicker-arrow"></i>
                                     </div>
                                 </div>
 
                             </div>
+
+
                         </div>
                         <div class="booking-details">
                             <div class="row">
@@ -201,7 +215,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="book-btn">
-                                        <button class="rq-btn rq-btn-primary btn-large">Book Now <i
+                                        <button class="rq-btn rq-btn-primary btn-large" type="submit"> Book Now <i
                                                 class="ion-android-car"></i></button>
                                     </div>
                                 </div>
@@ -210,6 +224,8 @@
                     </div>
                 </div>
             </div> <!-- /.rq-content-block -->
+        </form>
+
             <div class="rq-content-block">
                 <div class="related-car-faq">
                     <div class="container">

@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Bookings;
 use App\Locations;
+use App\Payments;
+use App\PaymentType;
 use App\Products;
 use App\Reviews;
 use App\TypeProducts;
-
+use Carbon\Carbon;
 
 use Illuminate\Pagination\Paginator;
 use Illuminate\Foundation\Auth\User;
@@ -154,6 +156,7 @@ class ClientController extends Controller
         $user = User::all();
         $location =Locations::all();
 
+
         return view('pages.listdetail',['product'=>$product,'review'=>$review,'user'=>$user,'location'=>$location]);
     }
 
@@ -204,14 +207,47 @@ class ClientController extends Controller
 
     public function getSearch(Request $request){
 //        $product= Products::where('title','like','%'.$request->id_name.'%')->get();
-        $product= Products::where('title','like','%'.$request->id_name.'%')->paginate(2);
+        $product= Products::where('title','like','%'.$request->id_name.'%')->paginate(4);
         $id_receivelc = $request->id_receivelc;
         $location =Locations::all();
         $typeproduct = TypeProducts::all();
         $bookings = Bookings::all();
-
         return view('pages.search',compact('product'),['product'=>$product,'typeproduct'=>$typeproduct,'location'=>$location,'id_receivelc'=>$id_receivelc,'bookings'=>$bookings]);
     }
 
+    public function getCheckout(Request $request, $id){
+        $product= Products::find($id);
+        $user = User::all();
+        $pickupLocation = $request->pickupLocation;
+        $dropLocation = $request->dropLocation;
+        $pickupDate = $request->pickupDate;
+        $returnDate = $request->returnDate;
+        Carbon::parse($pickupDate);
+        Carbon::parse($returnDate);
+        $dayrent= Carbon::parse($pickupDate)->diffInDays(Carbon::parse($returnDate));
+        $location = Locations::all();
+        return view('pages.checkout',['user'=>$user,'product'=>$product,'pickupLocation'=>$pickupLocation,'dropLocation'=>$dropLocation,'pickupDate'=>$pickupDate,'returnDate'=>$returnDate,'location'=>$location,'dayrent'=>$dayrent]);
+    }
+    public function postCheckout(Request $request,$id){
+        $this ->validate($request,
+            [
+
+            ],
+            [
+
+            ]);
+        $booking = new Bookings;
+
+        $booking->pickupDay = Carbon::parse( $request->pickupDate);
+
+        $booking->dropDay = Carbon::parse( $request->returnDate);
+        $booking->idProduct = $request->id;
+        $booking->idLocation = $request->pickupLocation;
+        $booking->iddropLocation = $request->dropLocation;
+        $booking->idUser=Auth::user()->id;
+        $booking->save();
+
+       return redirect("checkout/".$id)->with('notice','Booking Successfully');
+    }
 
 }

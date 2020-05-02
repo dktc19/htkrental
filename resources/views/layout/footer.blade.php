@@ -55,7 +55,7 @@
     <div class="rq-copyright-section">
         <div class="container">
             <div class="copyright-content">
-                <p><a href="#"><img src="cssClient/img/company-logo.png" alt=""></a> © 2016 <a href="#">Turbo, Inc</a>.</p>
+                <p><a href="#"><img src="cssAdmin/img/logo.png" alt=""></a> © 2020<a href="#">HTK Rental</a>.</p>
                 <ul class="list-unstyled social-list">
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>

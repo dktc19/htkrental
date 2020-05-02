@@ -8,10 +8,10 @@
             <form method="get" action="search">
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
             <div class="rq-search-container">
-                <div class="rq-search-single">
+                <div class="rq-search-single" style="width: 400px">
                     <div class="rq-search-content">
                         <span class="rq-search-heading">Location</span>
-                        <select name="id_receivelc" class="category-option" >
+                        <select name="id_receivelc" class="category-option">
                             <option selected disabled> Select the Location</option>
                             @foreach($location as $lc)
                                 <option value="{{$lc->id}}">{{$lc-> name}}</option>
@@ -19,61 +19,33 @@
                         </select>
                     </div>
                 </div>
-{{--                <div class="rq-search-single">--}}
-{{--                    <div class="rq-search-content last-child">--}}
-{{--                        <span class="rq-search-heading">Name of Bike</span>--}}
-{{--                        <select name="id_name" class="category-option">--}}
-{{--                            <option selected disabled> Select the Location</option>--}}
-{{--                            @foreach($product as $pr)--}}
-{{--                                <option value="{{$pr->id}}">{{$pr-> title}}</option>--}}
-{{--                            @endforeach--}}
-{{--                        </select>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-                <div class="rq-search">
+                <div class="rq-search" style="width: 400px">
                     <div>
                         <span class="rq-search-heading">Name</span><br>
-                        <input type="text" name="id_name" id="s" placeholder="Input key word..."/>
+                        <input type="text" name="id_name" id="s" placeholder="Input key word..." style="width: 100%"/>
                     </div>
                 </div>
-                <div class="rq-search-single">
+{{--                <div class="rq-search-single">--}}
+{{--                    <div class="rq-search-content">--}}
+{{--                        <span class="rq-search-heading">Pick up</span>--}}
+{{--                        <input type="text" name="id_startdate" class="rq-form-element datepicker" id="startdate" placeholder="Pick up date"/>--}}
+{{--                        <i class="ion-chevron-down datepicker-arrow"></i>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="rq-search-single">--}}
+{{--                    <div class="rq-search-content">--}}
+{{--                        <span class="rq-search-heading">Return</span>--}}
+{{--                        <input type="text" name="id_enddate" class="rq-form-element" id="enddate" placeholder="Return date"/>--}}
+{{--                        <i class="ion-chevron-down datepicker-arrow"></i>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                <div class="rq-search-single search-btn" style="width: 400px">
                     <div class="rq-search-content">
-                        <span class="rq-search-heading">Pick up</span>
-                        <input type="text" name="id_startdate" class="rq-form-element datepicker" id="startdate" placeholder="Pick up date"/>
-                        <i class="ion-chevron-down datepicker-arrow"></i>
-                    </div>
-                </div>
-                <div class="rq-search-single">
-                    <div class="rq-search-content">
-                        <span class="rq-search-heading">Return</span>
-                        <input type="text" name="id_enddate" class="rq-form-element" id="enddate" placeholder="Return date"/>
-                        <i class="ion-chevron-down datepicker-arrow"></i>
-                    </div>
-                </div>
-                <div class="rq-search-single search-btn">
-                    <div class="rq-search-content">
-                        <button class="rq-btn rq-btn-primary fluid-btn">Search <i class="arrow_right"></i></button>
+                        <button class="rq-btn rq-btn-primary fluid-btn" >Search <i class="arrow_right"></i></button>
                     </div>
                 </div>
             </div></form>
             <!-- / .search-container -->
-            <div class="rq-counting-list">
-                <ul class="list-unstyled">
-                    <li>
-                        <span class="count-result" data-from="25" data-to="500" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="count-category">User access</span>
-                    </li>
-                    <li>
-                        <span class="count-result" data-from="25" data-to="500" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="count-category">Cars</span>
-                    </li>
-                    <li>
-                        <span class="count-result" data-from="25" data-to="550" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="count-category">Reviews</span>
-                    </li>
-                </ul>
-            </div>
-
         </div>
     </div> <!-- /.header-body -->
     @endsection

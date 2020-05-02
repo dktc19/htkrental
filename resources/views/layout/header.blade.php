@@ -54,11 +54,12 @@
                             <ul class="dropdown-menu" >
                                 <li><a href="about" style="font-size:90%;">About Us</a></li>
                                 <li><a href="contact-us.html">Contact us</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
+
                                 <li><a href="shopping-cart.html">shopping cart</a></li>
                                 <li><a href="login" style="font-size:90%;">Registration</a></li>
                             </ul>
                         </li>
+
                     </ul>
 
 
@@ -82,36 +83,10 @@
                                     <li><a href="logout"><i class="fa fa-sign-out" style="font-size:16px"></i>&nbsp;&nbsp;Logout</a></li>
                                 </ul>
                             </li>
-{{--                            <li>--}}
-{{--                                    <a href="user"><span class="fa fa-user" style="width: 15px"></span>{{$user_account->name}}</a>--}}
-{{--                            </li>--}}
-{{--                            @if($user_account->idRole ==1)--}}
-{{--                            <li>--}}
-{{--                                <a href="admin/home/view" ><span></span>Admin Site</a>--}}
-{{--                            </li>--}}
-{{--                            @endif--}}
-{{--                            <li>--}}
-{{--                                <a href="logout">Logout</a>--}}
-{{--                            </li>--}}
 
                         @endif
+                            <li><a href="checkout/{id}" style="font-size:14px">Checkout</a></li>
 
-                        <li class="dropdown right-side-link">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">ENG<span class="ion-chevron-down"></span></a>
-                            <ul class="dropdown-menu with-language">
-                                <li><a href="#">Fr</a></li>
-                                <li><a href="#">De</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown right-side-link last">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">USD<span class="ion-chevron-down"></span></a>
-                            <ul class="dropdown-menu with-language">
-                                <li><a href="#">USD</a></li>
-                                <li><a href="#">Eur</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
