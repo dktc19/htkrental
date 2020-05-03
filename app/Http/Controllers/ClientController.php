@@ -206,8 +206,7 @@ class ClientController extends Controller
     }
 
     public function getSearch(Request $request){
-//        $product= Products::where('title','like','%'.$request->id_name.'%')->get();
-        $product= Products::where('title','like','%'.$request->id_name.'%')->paginate(4);
+        $product= Products::where('title','like','%'.$request->id_name.'%')->get();
         $id_receivelc = $request->id_receivelc;
         $location =Locations::all();
         $typeproduct = TypeProducts::all();
@@ -225,8 +224,9 @@ class ClientController extends Controller
         Carbon::parse($pickupDate);
         Carbon::parse($returnDate);
         $dayrent= Carbon::parse($pickupDate)->diffInDays(Carbon::parse($returnDate));
+        $totalprice=($dayrent*$product->daily_price);
         $location = Locations::all();
-        return view('pages.checkout',['user'=>$user,'product'=>$product,'pickupLocation'=>$pickupLocation,'dropLocation'=>$dropLocation,'pickupDate'=>$pickupDate,'returnDate'=>$returnDate,'location'=>$location,'dayrent'=>$dayrent]);
+        return view('pages.checkout',['user'=>$user,'product'=>$product,'pickupLocation'=>$pickupLocation,'dropLocation'=>$dropLocation,'pickupDate'=>$pickupDate,'returnDate'=>$returnDate,'location'=>$location,'dayrent'=>$dayrent,'totalprice'=>$totalprice]);
     }
     public function postCheckout(Request $request,$id){
         $this ->validate($request,
@@ -244,6 +244,7 @@ class ClientController extends Controller
         $booking->idProduct = $request->id;
         $booking->idLocation = $request->pickupLocation;
         $booking->iddropLocation = $request->dropLocation;
+        $booking->totalprice = $request->totalprice;
         $booking->idUser=Auth::user()->id;
         $booking->save();
 
@@ -284,9 +285,29 @@ class ClientController extends Controller
             $message->to($emailUser,'Visitors')->subject('Please perform payment');
         });
 
-        return redirect('processing')->with('notice','Perform Booking Success');
+        return redirect('processing')->with('notice','Processing Booking Success');
+    }
+    public function getPerforming($id){
+        $booking = Bookings::find($id);
+        $user=  User::all();
+        $booking->status = 2;
+        $booking->save();
+        foreach ($user as $us){
+            if($booking->idUser == $us->id){
+                $confirmEmail = $us->email;
+            }
+        }
+        Mail::send('pages.email.confirm',[
+            'id'=>$id],function ($message)use ($confirmEmail){
+            $message->to($confirmEmail,'Visitors')->subject('Booking Success');
+        });
+        return redirect('processing')->with('notice','Performing Booking Success');
     }
     public function getPaymentSuccess(){
         return view('pages.email.paymentsuccess');
+    }
+
+    public function getViewbookingUser(){
+        return view('pages.viewbooking');
     }
 }

@@ -1,5 +1,6 @@
 @extends('layout.index')
 @section('content')
+    <h1> The page for the staff perform the customer bill</h1>
     <form id="empform" action="processing" method="GET">
         <table id="mytable" class="table table-bordered">
             <thead>
@@ -8,6 +9,7 @@
             <th style="width:15%;">Pickup Date</th>
             <th style="width:10%;">Return Date</th>
             <th style="width:10%;">Product</th>
+            <th style="width:10%;">Total Price</th>
             <th style="width:15%;">Status</th>
             <th style="width:25%;">Actions</th>
             </thead>
@@ -31,13 +33,16 @@
                 <td> {{$pr->title}}</td>
                         @endif
                     @endforeach
+                    <td>{{$bk->totalprice}}</td>
                     @if($bk->status == 0)
                     <td>Waiting</td>
-                    @else<td>Processing</td>
+                    @elseif($bk->status == 1)<td>Processing</td>
+                        @else<td>Performing</td>
                     @endif
                 <td>
                     <div class="buttons">
-                        <a href="processingBooking/{{$bk->id}}" class="btn btn-primary">Perform</a>
+                        <a href="processingBooking/{{$bk->id}}" class="btn btn-primary">Processing</a>
+                        <a href="performingBooking/{{$bk->id}}" class="btn btn-primary"> Performing</a>
                         <a href="processingDelete/{{$bk->id}}" class="btn btn-danger">Cancel</a>
                     </div>
                 </td>

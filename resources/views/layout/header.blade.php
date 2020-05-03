@@ -76,7 +76,6 @@
                                 </ul>
                             </li>
                         @endif
-                            <li><a href="checkout/{id}" style="font-size:100%">Checkout</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->

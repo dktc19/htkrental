@@ -455,6 +455,7 @@
 
             </div>
             <div>
+                <center><h1 style="color: #efa80f;">You have successfully paid for your order.</h1></center>
                 <div class="layout one-col fixed-width stack" style="Margin: 0 auto;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;">
                     <div class="layout__inner" style="border-collapse: collapse;display: table;width: 100%;background-color: #ffffff;">
                         <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-fixed-width" style="background-color: #ffffff;"><td style="width: 600px" class="w560"><![endif]-->
@@ -462,20 +463,14 @@
 
                             <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;">
                                 <div style="mso-line-height-rule: exactly;mso-text-raise: 11px;vertical-align: middle;">
-                                    <h1 style="Margin-top: 0;Margin-bottom: 20px;font-style: normal;font-weight: normal;color: #404040;font-size: 28px;line-height: 36px;text-align: center;">Hi, We are from HTK rental,</h1>
+                                    <h1 style="Margin-top: 0;Margin-bottom: 20px;font-style: normal;font-weight: normal;color: #404040;font-size: 28px;line-height: 36px;text-align: center;">Hi, We are from HTK rental, Your order has been successfully completed.</h1>
                                 </div>
                             </div>
 
 
                             <div style="Margin-left: 20px;Margin-right: 20px;">
-                                <div style="mso-line-height-rule: exactly;line-height: 10px;font-size: 1px;">
-                                    <h2> This is the payment for your bill. If you do not pay within 24 hours. Your Booking will be canceled.</h2>
-                                    &nbsp;</div>
-                            </div>
-
-                            <div style="Margin-left: 20px;Margin-right: 20px;">
-                                <div style="font-size: 12px;font-style: normal;font-weight: normal;line-height: 19px;Margin-bottom: 20px;" align="center">
-                                    <img style="border: 0;display: block;height: auto;width: 100%;max-width: 428px;" alt="" width="428" src="upload/image/banner/banner.jpg" />
+                                <div style="mso-line-height-rule: exactly;line-height: 10px;font-size: 1px;">&nbsp;
+                               <center><h2>We hope you can experience our services well.<br> If you have any difficulties, you can contact us via phone number:<br> 0372579483</h2></center>
                                 </div>
                             </div>
 
@@ -483,20 +478,9 @@
                                 <div style="mso-line-height-rule: exactly;line-height: 10px;font-size: 1px;">&nbsp;</div>
                             </div>
 
-                            <div style="Margin-left: 20px;Margin-right: 20px;">
-                                <div style="mso-line-height-rule: exactly;mso-text-raise: 11px;vertical-align: middle;">
-                                    <h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;"> Click below to receive our bank account information</h2>
-                                </div>
-                            </div>
-                            <div style="Margin-left: 20px;Margin-right: 20px;Margin-bottom: 24px;">
-                                <div class="btn btn--flat btn--large" style="text-align:center;">
-                                    <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #efa80f;font-family: Open Sans, sans-serif;" href="http://localhost:8080/FinalPJ/public/email/paymentsuccess">Payment to Your Order</a><![endif]>
-                                    <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://test.com" style="width:134px" arcsize="9%" fillcolor="#E45D6B" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:Open Sans,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">Active Email</center></v:textbox></v:roundrect><![endif]--></div>
-                                <div style="Margin-left: 20px;Margin-right: 20px;">
-                                    <div style="mso-line-height-rule: exactly;line-height: 10px;font-size: 1px;">
-                                        <h2>The form of payment will be by banking transfer</h2>&nbsp;</div>
-                                </div>
-                            </div>
+
+
+
 
                         </div>
                         <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
@@ -509,7 +493,7 @@
                 <div role="contentinfo">
                     <div class="layout email-footer stack" style="Margin: 0 auto;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;">
                         <div class="layout__inner" style="border-collapse: collapse;display: table;width: 100%;">
-                            <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 400px;" valign="top" class="w360"><![endif]-->
+                            <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 400px;" valign="top" class="w360"></table><![endif]-->
                             <div class="column wide" style="text-align: left;font-size: 12px;line-height: 19px;color: #bdb9bd;font-family: Cabin,Avenir,sans-serif;Float: left;max-width: 400px;min-width: 320px; width: 320px;width: calc(8000% - 47600px);">
                                 <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 10px;Margin-bottom: 10px;">
 
