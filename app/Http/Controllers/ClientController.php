@@ -215,6 +215,19 @@ class ClientController extends Controller
     }
 
     public function getCheckout(Request $request, $id){
+        $this ->validate($request,
+            [
+                'pickupDate'=>'required',
+                'returnDate'=>'required',
+                'pickupLocation'=>'required',
+                'dropLocation'=>'required',
+            ],
+            [
+                'pickupDate.required'=>'Please input the pick up day',
+                'returnDate.required'=>'Please input the drop up day',
+                'pickupLocation.required'=>'Please input the pick up location',
+                'dropLocation.required'=>'Please input the drop location',
+            ]);
         $product= Products::find($id);
         $user = User::all();
         $pickupLocation = $request->pickupLocation;
@@ -229,13 +242,7 @@ class ClientController extends Controller
         return view('pages.checkout',['user'=>$user,'product'=>$product,'pickupLocation'=>$pickupLocation,'dropLocation'=>$dropLocation,'pickupDate'=>$pickupDate,'returnDate'=>$returnDate,'location'=>$location,'dayrent'=>$dayrent,'totalprice'=>$totalprice]);
     }
     public function postCheckout(Request $request,$id){
-        $this ->validate($request,
-            [
 
-            ],
-            [
-
-            ]);
         $booking = new Bookings;
 
         $booking->pickupDay = Carbon::parse( $request->pickupDate);
@@ -254,7 +261,7 @@ class ClientController extends Controller
         $User->phone = $request->phone;
         $User->save();
 
-       return redirect("checkout/".$id)->with('notice','Booking Successfully');
+       return redirect("checkout/".$id);
     }
 
     public function getProcessing(){
@@ -267,7 +274,7 @@ class ClientController extends Controller
     public function getDelete($id){
         $booking = Bookings::find($id);
         $booking->delete();
-        return redirect('processing')->with('notice','Cancel Booking Success');
+        return redirect('processing');
     }
 
     public function getProcessingbooking($id){
@@ -285,7 +292,7 @@ class ClientController extends Controller
             $message->to($emailUser,'Visitors')->subject('Please perform payment');
         });
 
-        return redirect('processing')->with('notice','Processing Booking Success');
+        return redirect('processing');
     }
     public function getPerforming($id){
         $booking = Bookings::find($id);
@@ -301,13 +308,17 @@ class ClientController extends Controller
             'id'=>$id],function ($message)use ($confirmEmail){
             $message->to($confirmEmail,'Visitors')->subject('Booking Success');
         });
-        return redirect('processing')->with('notice','Performing Booking Success');
+        return redirect('processing');
     }
     public function getPaymentSuccess(){
         return view('pages.email.paymentsuccess');
     }
 
-    public function getViewbookingUser(){
-        return view('pages.viewbooking');
+    public function getViewbookingUser($id){
+        $booking = Bookings::find($id);
+        $user = User::all();
+        $location =Locations::all();
+        $product = Products::all();
+        return view('pages.viewbooking',['booking'=>$booking,'user'=>$user,'location'=>$location,'product'=>$product]);
     }
 }

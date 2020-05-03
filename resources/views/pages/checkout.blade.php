@@ -77,10 +77,7 @@
                             </div> <!-- end .panel-body -->
                 </div><!-- end .panel-collapse -->
                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- end .panel-default -->
+                            <!-- end .panel-default -->
                 @endif
             @if(isset($product->id))
                 <form action="checkout/{{$product->id}}" method="POST">

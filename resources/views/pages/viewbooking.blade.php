@@ -12,19 +12,39 @@
             <th style="width:10%;">Total Price</th>
             <th style="width:15%;">Status</th>
             </thead>
-                <tbody>
+            <tbody>
+
                 <tr ng-repeat="emp in empoyees">
-{{--                    @foreach($user as $us)--}}
-{{--                        @if($bk->idUser == $us->id)--}}
-{{--                            <td>{{$us->name}}</td>--}}
-{{--                        @endif--}}
-{{--                    @endforeach--}}
-{{--                    @foreach($location as $lc)--}}
-{{--                        @if($bk->idLocation == $lc->id)--}}
-{{--                            <td>{{$lc->name}}</td>--}}
-{{--                        @endif--}}
-{{--                    @endforeach--}}
-{{--                    <td>{{$bk->pickupDay}}</td>--}}
+                @if($booking->idUser == $user_account->id)
+                    @foreach($user as $us)
+                        @if($us->id == $booking->idUser)
+                    <td>{{$us->name}}</td>
+                            @endif
+                        @endforeach
+                    @foreach($location as $lc)
+                        @if($booking->idLocation == $lc->id)
+                    <td>{{$lc->name}}</td>
+                            @endif
+                        @endforeach
+                        <td>{{$booking->pickupDay}}</td>
+                    <td>{{$booking->dropDay}}</td>
+                        @foreach($product as $pr)
+                            @if($booking->idProduct == $pr->id)
+                        <td>{{$pr->title}}</td>
+                            @endif
+                        @endforeach
+                        <td>{{$booking->totalprice}}</td>
+                        @if($booking->status == 0)
+                            <td>Waiting</td>
+                            @elseif($booking->status == 1)
+                            <td>Processing</td>
+                            @else
+                            <td>Performing</td>
+                            @endif
+                    @endif
+
+{{--                                                            <td>{{$bk->pickupDay}}</td>--}}
+
 {{--                    <td>{{$bk->dropDay}}</td>--}}
 {{--                    @foreach($product as $pr)--}}
 {{--                        @if($bk->idProduct == $pr->id)--}}
@@ -37,15 +57,10 @@
 {{--                    @elseif($bk->status == 1)<td>Processing</td>--}}
 {{--                    @else<td>Performing</td>--}}
 {{--                    @endif--}}
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
+
                 </tr>
                 </tbody>
+
         </table>
     </form>
 @endsection

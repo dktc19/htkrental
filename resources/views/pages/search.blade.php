@@ -18,7 +18,6 @@
 <div class="rq-page-content">
     <div class="rq-content-block gray-bg small-padding-top">
         <div class="container">
-
             <div class="rq-car-listing-wrapper">
                 <div class="rq-listing-choose rq-listing-list">
                     <div class="row">

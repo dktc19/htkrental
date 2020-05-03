@@ -154,6 +154,12 @@
                     <div class="listing-page-title">
                         <h3>Book Bike Now</h3>
                     </div>
+                    @if(count($errors)>0)
+                        <div class="alert alert-danger">
+                            @foreach($errors->all() as $err){{$err}}<br>
+                            @endforeach
+                        </div>
+                    @endif
                     <div class="rq-car-booking-section">
                         <div class="car-search">
                             <div class="rq-search-container">
