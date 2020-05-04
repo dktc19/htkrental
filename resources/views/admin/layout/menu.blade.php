@@ -10,7 +10,7 @@
                 </li>
                 <li>
                     <a href="#layouts">
-                        <i class="iconsminds-digital-drawing"></i> User
+                        <i class="simple-icon-people"></i> User
                     </a>
                 </li>
                 <li>
@@ -25,12 +25,7 @@
                 </li>
                 <li>
                     <a href="#BK">
-                        <i class=""></i> Booking
-                    </a>
-                </li>
-                <li>
-                    <a href="#MP">
-                        <i class="iconsminds-pantone"></i> Manage Payment
+                        <i class="iconsminds-basket-coins"></i> Booking
                     </a>
                 </li>
                 <li>
@@ -97,12 +92,12 @@
                         <ul class="list-unstyled inner-level-menu">
                             <li>
                                 <a href="admin/product/view">
-                                    <i class="simple-icon-event"></i> <span class="d-inline-block">View All Product</span>
+                                    <i class="simple-icon-check"></i> <span class="d-inline-block">View All Product</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="admin/product/add">
-                                    <i class="simple-icon-doc"></i> <span class="d-inline-block">Add New Product</span>
+                                    <i class="simple-icon-check"></i> <span class="d-inline-block">Add New Product</span>
                                 </a>
                             </li>
                             <li>
@@ -125,34 +120,6 @@
                                     <i class="simple-icon-check"></i> <span class="d-inline-block">Add New Manufacture</span>
                                 </a>
                             </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul class="list-unstyled" data-link="MP">
-                <li>
-                    <a href="#" data-toggle="collapse" data-target="#collapseForms" aria-expanded="true"
-                       aria-controls="collapseForms" class="rotate-arrow-icon opacity-50">
-                        <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Functions</span>
-                    </a>
-                    <div id="collapseForms" class="collapse show">
-                        <ul class="list-unstyled inner-level-menu">
-                            <li>
-                                <a href="admin/payment/view">
-                                    <i class="simple-icon-event"></i> <span class="d-inline-block">View All Payment</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="admin/paymenttype/view">
-                                    <i class="simple-icon-doc"></i> <span class="d-inline-block">View All Payment Type</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="admin/paymenttype/add">
-                                    <i class="simple-icon-check"></i> <span class="d-inline-block">Add New Payment Type</span>
-                                </a>
-                            </li>
-
                         </ul>
                     </div>
                 </li>

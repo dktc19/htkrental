@@ -48,6 +48,7 @@
                                     <th>Role</th>
                                     <th>Phone</th>
                                     <th>DateofBirth</th>
+                                    <th>Status</th>
                                     <th>Action</th>
 
                                 </tr>
@@ -66,7 +67,7 @@
                                         @endforeach
                                         <td>{{$us->phone}}</td>
                                         <td>{{$us->DateofBirth}}</td>
-
+                                        <td>{{$us->active}}</td>
                                         <td>
                                             <a href="admin/user/edit/{{$us -> id}}" class="btn btn-sm btn-outline-primary">Edit</a>
                                             <a href="admin/user/delete/{{$us -> id}}" class="btn btn-sm btn-outline-danger">Delete</a>
@@ -104,6 +105,7 @@
                 {"data": "role"},
                 {"data": "phone"},
                 {"data": "dateofbirth"},
+                {"data": "status"},
                 {"data": "Action"},
 
             ],
