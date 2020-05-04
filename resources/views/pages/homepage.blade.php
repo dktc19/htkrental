@@ -196,9 +196,9 @@
             <div class="rq-partners-section">
                 <div class="partners-wrapper">
                     <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_001.jpg" alt="" style="height: 120px; width: 160px"></a></div>
-                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_002.jpg" alt="" style="height: 120px; width: 160px"></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/banner/logo2.png" alt="" style="height: 120px; width: 160px"></a></div>
                     <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_001.jpg" alt="" style="height: 120px; width: 160px"></a></div>
-                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_002.jpg" alt="" style="height: 120px; width: 160px"></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/banner/logo2.png" alt="" style="height: 120px; width: 160px"></a></div>
                     <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_001.jpg" alt="" style="height: 120px; width: 160px"></a></div>
                 </div>
             </div> <!-- /.rq-partners-section -->

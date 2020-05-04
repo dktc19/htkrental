@@ -73,6 +73,11 @@ class ProductController extends Controller
             $file->move('upload/image/image_product',$image);
             $product->image=$image;
         }
+        $product->size = $request->size;
+        $product->weight = $request->weight;
+        $product->groupset = $request->groupset;
+        $product->cassette = $request->cassette;
+
         $product -> save();
 
         return redirect('admin/product/view')->with('notice', 'Edit success');
