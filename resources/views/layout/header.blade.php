@@ -79,8 +79,11 @@
         <li><a href="viewbooking" style="font-size:13px;">
                 <i></i>View your Booking</a>
         </li>
-                        @endif
 
+                        @endif
+                            <li><a href="error" style="font-size:13px;">
+                                    <i></i>Checkout</a>
+                            </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

@@ -7,6 +7,7 @@
             <thead>
             <th style="width:5%;">UserName</th>
             <th style="width:10%;">Pickup Location</th>
+            <th style="width:10%;">Drop Location</th>
             <th style="width:15%;">Pickup Date</th>
             <th style="width:10%;">Return Date</th>
             <th style="width:10%;">Product</th>
@@ -27,6 +28,11 @@
                     <td>{{$lc->name}}</td>
                             @endif
                         @endforeach
+                        @foreach($location as $lc)
+                            @if($bk->iddropLocation == $lc->id)
+                                <td>{{$lc->name}}</td>
+                            @endif
+                        @endforeach
                         <td>{{$bk->pickupDay}}</td>
                     <td>{{$bk->dropDay}}</td>
                         @foreach($product as $pr)
@@ -38,9 +44,9 @@
                         @if($bk->status == 0)
                             <td>Waiting</td>
                             @elseif($bk->status == 1)
-                            <td>Processing</td>
+                            <td>Waiting Payment</td>
                             @else
-                            <td>Performing</td>
+                            <td>Completing</td>
                             @endif
                     @endif
                         @endforeach
@@ -51,6 +57,8 @@
 
         </table>
     </form>
-    @else <label>You must login to view your booking</label>
+    @else
+        <center><h1>You must login to view your booking</h1><br></center>
+        <center><a href="login"><h3>Go to Login</h3></a></center>
     @endif
 @endsection

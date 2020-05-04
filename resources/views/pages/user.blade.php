@@ -19,7 +19,6 @@
                             @endforeach
                         </div>
                     @endif
-
                     @if(session('notice'))
                         <div class="alert alert-danger">
                             {{session('notice')}}
@@ -45,6 +44,7 @@
                                     <label>Email</label>
                                     <input type="email" required class="rq-form-control" name="email"  readonly value="{{$user_account->email}}">
                                 </div>
+
                                 <div class="col-md-10">
                                     <label>Change Your Password</label>
                                     <input type="password" class="rq-form-control password"  name="password" disabled>
@@ -70,13 +70,14 @@
                                     <input type="date" class="rq-form-control" name="DateofBirth" value="{{$user_account->DateofBirth}}">
                                 </div>
                                 <div class="col-md-10">
+                                    <a href="viewbooking" style="margin-left: auto; font-size: 20px">View Your Booking</a>
+                                </div>
+                                <div class="col-md-10"><br><br>
                                     <div class="">
                                         <button type="submit" class="rq-btn rq-btn-primary border-radius">Confirm Edit<i class="arrow_right"></i></button>
                                     </div>
                                 </div>
-                                <div class="rq-browse-section">
-                                    <a href="viewbooking" style="margin-left: auto; font-size: 20px">View Your Booking<i class="ion-ios-arrow-right"></i></a>
-                                </div>
+
 
 
 

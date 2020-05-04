@@ -101,7 +101,7 @@
                                 <input type="text" class="rq-form-control reverse" placeholder="Input Your Name" required name="name">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="rq-form-control reverse" placeholder="Email Address" required name="email">
+                                <input type="email" class="rq-form-control reverse" placeholder="Input the correct email to take email active" required name="email">
                             </div>
                             <div class="col-md-6">
                                 <input type="password" class="rq-form-control reverse" placeholder="Password" required name="password">

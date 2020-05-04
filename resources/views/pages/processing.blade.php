@@ -36,13 +36,13 @@
                     <td>{{$bk->totalprice}}</td>
                     @if($bk->status == 0)
                     <td>Waiting</td>
-                    @elseif($bk->status == 1)<td>Processing</td>
-                        @else<td>Performing</td>
+                    @elseif($bk->status == 1)<td>Waiting Payment</td>
+                        @else<td>Complete</td>
                     @endif
                 <td>
                     <div class="buttons">
-                        <a href="processingBooking/{{$bk->id}}" class="btn btn-primary">Processing</a>
-                        <a href="performingBooking/{{$bk->id}}" class="btn btn-primary"> Performing</a>
+                        <a href="processingBooking/{{$bk->id}}" class="btn btn-primary">Payment</a>
+                        <a href="performingBooking/{{$bk->id}}" class="btn btn-primary"> Complete</a>
                         <a href="processingDelete/{{$bk->id}}" class="btn btn-danger">Cancel</a>
                     </div>
                 </td>

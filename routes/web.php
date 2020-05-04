@@ -135,6 +135,8 @@ Route::group(['prefix'=> 'email'],function (){
 
 });
 
+    Route::get('activeEmail/{id}','ClientController@getActiveEmail');
+
     Route::get('user','ClientController@getUser');
     Route::post('user','ClientController@postUser');
 
@@ -153,13 +155,19 @@ Route::group(['prefix'=> 'email'],function (){
     Route::get('checkout/{id}','ClientController@getCheckout');
     Route::post('checkout/{id}','ClientController@postCheckout');
 
+    //Route::get('processing','ClientController@getProcessing');
+Route::group(['middleware'=>'staffMiddleware'],function (){
+
     Route::get('processing','ClientController@getProcessing');
+    });
 
     Route::get('performingBooking/{id}','ClientController@getPerforming');
     Route::get('processingDelete/{id}','ClientController@getDelete');
     Route::get('processingBooking/{id}','ClientController@getProcessingbooking');
 
     Route::get('viewbooking','ClientController@getViewbookingUser');
+
+    Route::get('error','ClientController@getError');
 
 
 

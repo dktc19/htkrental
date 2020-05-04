@@ -96,6 +96,13 @@ class ClientController extends Controller
         return view('pages.activesuccess');
     }
 
+    public function getActiveEmail($id){
+        $user =User::find($id);
+        $user->active = 1;
+        $user->save();
+        return view('pages.activesuccess');
+    }
+
 
     public function getLogout(){
         Auth::logout();
@@ -104,7 +111,8 @@ class ClientController extends Controller
 
     public function getUser(){
         $booking = Bookings::all();
-        return view('pages.user',['booking'=>$booking]);
+        $user = User::all();
+        return view('pages.user',['booking'=>$booking,'user'=>$user]);
     }
 
    public function postUser(Request $request){
@@ -261,7 +269,8 @@ class ClientController extends Controller
         $User->phone = $request->phone;
         $User->save();
 
-       return redirect("checkout/".$id);
+
+       return redirect("checkout/".$id)->with('noticebk','Booking Success');
     }
 
     public function getProcessing(){
@@ -328,5 +337,9 @@ class ClientController extends Controller
         $location =Locations::all();
         $product = Products::all();
         return view('pages.viewbooking',['booking'=>$booking,'user'=>$user,'location'=>$location,'product'=>$product]);
+    }
+
+    public function getError(){
+        return view('pages.error');
     }
 }
