@@ -15,7 +15,6 @@
 
     <main>
         <div class="container-fluid">
-
             <div class="row mb-4">
                 <div class="col-12 mb-4">
                     <div class="card">
@@ -33,7 +32,6 @@
                                     <th>GroupSet</th>
                                     <th>Cassette</th>
                                     <th>Action</th>
-
                                 </tr>
                                 </thead>
                                 @foreach($product as $prd)
@@ -94,7 +92,6 @@
                 {"data": "groupset"},
                 {"data": "cassette"},
                 {"data": "Action"},
-
             ],
             drawCallback: function () {
                 $($(".dataTables_wrapper .pagination li:first-of-type"))
