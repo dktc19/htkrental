@@ -75,6 +75,10 @@
                                     <li><a href="logout"><i class="fa fa-sign-out" style="font-size:16px"></i>&nbsp;&nbsp;Logout</a></li>
                                 </ul>
                             </li>
+
+        <li><a href="viewbooking" style="font-size:13px;">
+                <i></i>View your Booking</a>
+        </li>
                         @endif
 
                     </ul>

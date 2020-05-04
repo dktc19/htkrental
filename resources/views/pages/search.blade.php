@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @elseif(($id_receivelc == 0))
+                            @elseif(($id_receivelc == 0)&&($pr->status ==0))
                                 <div class="col-md-4 col-sm-6">
                                     <div class="listing-single">
                                         <div class="listing-img">

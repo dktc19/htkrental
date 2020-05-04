@@ -195,11 +195,11 @@
         <div class="container">
             <div class="rq-partners-section">
                 <div class="partners-wrapper">
-                    <div class="partner-single"><a href="#"><img src="cssClient/img/partner-logo/partner1.png" alt=""></a></div>
-                    <div class="partner-single"><a href="#"><img src="cssClient/img/partner-logo/partner3.png" alt=""></a></div>
-                    <div class="partner-single"><a href="#"><img src="cssClient/img/partner-logo/partner2.png" alt=""></a></div>
-                    <div class="partner-single"><a href="#"><img src="cssClient/img/partner-logo/partner4.png" alt=""></a></div>
-                    <div class="partner-single"><a href="#"><img src="cssClient/img/partner-logo/partner5.png" alt=""></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_001.jpg" alt="" style="height: 120px; width: 160px"></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_002.jpg" alt="" style="height: 120px; width: 160px"></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_001.jpg" alt="" style="height: 120px; width: 160px"></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_002.jpg" alt="" style="height: 120px; width: 160px"></a></div>
+                    <div class="partner-single"><a href="#"><img src="upload/image/partner/partner_001.jpg" alt="" style="height: 120px; width: 160px"></a></div>
                 </div>
             </div> <!-- /.rq-partners-section -->
         </div>

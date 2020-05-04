@@ -46,6 +46,13 @@
                             @endif
                             <form  action="admin/product/add" method="POST" class="mb-5" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                                <div class="tooltip-label-right">
+                                    <div class="error-l-100 position-relative form-group">
+                                        <label>Name of product</label>
+                                        <input name="title" required="" id="input1" type="text" class="form-control">
+                                        <div class="invalid-tooltip">Label Right!</div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <select name="idLocation" class="form-control">
                                         <option selected disabled> Select the Location</option>

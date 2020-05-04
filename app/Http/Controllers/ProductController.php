@@ -31,6 +31,7 @@ class ProductController extends Controller
 
             ]);
         $product = new Products();
+        $product->title = $request->title;
         $product->idLocation = $request->idLocation;
         $product->idModel = $request->idModel;
         if ($request->hasFile('image')){

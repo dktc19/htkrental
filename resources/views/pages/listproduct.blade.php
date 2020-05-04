@@ -44,41 +44,6 @@
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">
-                                        Class <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                        <span class="rq-checkbox">
-                          <input type="checkbox" id="class-a">
-                          <label for="class-a">A class</label>
-                        </span>
-                                        </li>
-                                        <li>
-                        <span class="rq-checkbox">
-                          <input type="checkbox" id="class-b">
-                          <label for="class-b">B class</label>
-                        </span>
-                                        </li>
-                                        <li>
-                        <span class="rq-checkbox">
-                          <input type="checkbox" id="class-c">
-                          <label for="class-c">C class</label>
-                        </span>
-                                        </li>
-                                        <li>
-                        <span class="rq-checkbox">
-                          <input type="checkbox" id="class-d">
-                          <label for="class-d">D class</label>
-                        </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="filter-single">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
                                         Price <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
@@ -214,9 +179,6 @@
                             @endforeach
                         </div>
                     </div>
-                    {{--                    <div class="rq-pagination">--}}
-                    {{--                        {{$product->links()}}--}}
-                    {{--                    </div>--}}
                 </div>
 
             </div>

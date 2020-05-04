@@ -74,7 +74,7 @@ class ClientController extends Controller
         $user->name =$request->name;
         $user->email= $request->email;
         $user->password= bcrypt($request->password);
-        $user->idRole= 0;
+        $user->idRole= 2;
         $user->active = 0;
         $user->save();
         $id= $user->id;
@@ -103,7 +103,8 @@ class ClientController extends Controller
     }
 
     public function getUser(){
-        return view('pages.user',[]);
+        $booking = Bookings::all();
+        return view('pages.user',['booking'=>$booking]);
     }
 
    public function postUser(Request $request){
@@ -151,7 +152,6 @@ class ClientController extends Controller
 
     public function getListDetail(Request $request ,$id){
         $product= Products::find($id);
-
         $review =Reviews::all();
         $user = User::all();
         $location =Locations::all();
@@ -282,6 +282,10 @@ class ClientController extends Controller
         $user=  User::all();
         $booking->status = 1;
         $booking->save();
+        $findidProduct = $booking ->idProduct;
+        $product = Products::find($findidProduct);
+        $product->status = 1;
+        $product->save();
         foreach ($user as $us){
             if($booking->idUser == $us->id){
                 $emailUser = $us->email;
@@ -299,6 +303,10 @@ class ClientController extends Controller
         $user=  User::all();
         $booking->status = 2;
         $booking->save();
+        $findidProduct = $booking ->idProduct;
+        $product = Products::find($findidProduct);
+        $product->status = 1;
+        $product->save();
         foreach ($user as $us){
             if($booking->idUser == $us->id){
                 $confirmEmail = $us->email;
@@ -314,8 +322,8 @@ class ClientController extends Controller
         return view('pages.email.paymentsuccess');
     }
 
-    public function getViewbookingUser($id){
-        $booking = Bookings::find($id);
+    public function getViewbookingUser(){
+        $booking = Bookings::all();
         $user = User::all();
         $location =Locations::all();
         $product = Products::all();

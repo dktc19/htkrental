@@ -36,9 +36,8 @@
                                 <div class="col-md-10">
                                     <label>Change Image</label>
                                     <input type="file" name="image" class="custom-file-input" id="inputGroupFile01" value="{{$user_account->image}}">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose Image</label>
-                                </div>
-                                <div class="col-md-10">
+                                </div><br>
+                                <div class="col-md-10"><br>
                                     <label>Name</label>
                                     <input type="name" required class="rq-form-control" name="name" value="{{$user_account->name}}">
                                 </div>
@@ -48,11 +47,11 @@
                                 </div>
                                 <div class="col-md-10">
                                     <label>Change Your Password</label>
-                                    <input type="password" class="rq-form-control password"  name="password" >
+                                    <input type="password" class="rq-form-control password"  name="password" disabled>
                                 </div>
                                 <div class="col-md-10">
                                     <label>Password Again</label>
-                                    <input type="password" class="rq-form-control password" name="passwordAgain" >
+                                    <input type="password" class="rq-form-control password" name="passwordAgain" disabled>
                                 </div>
                                 <div class="col-md-10">
                                     <label>Address</label>
@@ -75,6 +74,10 @@
                                         <button type="submit" class="rq-btn rq-btn-primary border-radius">Confirm Edit<i class="arrow_right"></i></button>
                                     </div>
                                 </div>
+                                <div class="rq-browse-section">
+                                    <a href="viewbooking" style="margin-left: auto; font-size: 20px">View Your Booking<i class="ion-ios-arrow-right"></i></a>
+                                </div>
+
 
 
                             </div>

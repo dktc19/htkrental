@@ -40,6 +40,7 @@
                             <table class="data-table data-table-feature">
                                 <thead>
                                 <tr>
+                                    <th>Name of Product</th>
                                     <th>Location</th>
                                     <th>Model</th>
                                     <th>Daily Price</th>
@@ -51,6 +52,7 @@
                                 </thead>
                                 @foreach($product as $prd)
                                     <tr>
+                                        <td>{{$prd->title}}</td>
                                         @foreach($location as $lc)
                                             @if($prd->idLocation == $lc->id)
                                                 <td>{{$lc->name}}</td>

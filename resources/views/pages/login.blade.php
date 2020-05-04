@@ -97,16 +97,16 @@
                     <form class="form-horizontal"  action="register" method="post" >
                         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input type="text" class="rq-form-control reverse" placeholder="Input Your Name" required name="name">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input type="email" class="rq-form-control reverse" placeholder="Email Address" required name="email">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input type="password" class="rq-form-control reverse" placeholder="Password" required name="password">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input type="password" class="rq-form-control reverse" placeholder="Re - Password" required name="repassword">
                             </div>
                             <div class="col-md-12">

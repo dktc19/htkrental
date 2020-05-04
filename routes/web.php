@@ -159,7 +159,7 @@ Route::group(['prefix'=> 'email'],function (){
     Route::get('processingDelete/{id}','ClientController@getDelete');
     Route::get('processingBooking/{id}','ClientController@getProcessingbooking');
 
-    Route::get('viewbooking/{id}','ClientController@getViewbookingUser');
+    Route::get('viewbooking','ClientController@getViewbookingUser');
 
 
 
