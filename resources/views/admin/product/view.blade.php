@@ -15,23 +15,6 @@
 
     <main>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Datatables Default</h1>
-                    <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
-                        <ol class="breadcrumb pt-0">
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Library</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
-                    <div class="separator mb-5"></div>
-                </div>
-            </div>
 
             <div class="row mb-4">
                 <div class="col-12 mb-4">
@@ -44,8 +27,11 @@
                                     <th>Location</th>
                                     <th>Model</th>
                                     <th>Daily Price</th>
-                                    <th>Created At</th>
                                     <th>Image</th>
+                                    <th>Weight</th>
+                                    <th>Size</th>
+                                    <th>GroupSet</th>
+                                    <th>Cassette</th>
                                     <th>Action</th>
 
                                 </tr>
@@ -63,9 +49,12 @@
                                                 <td>{{$tpd->name}}</td>
                                             @endif
                                         @endforeach
-                                        <td>{{$prd->daily_price}}</td>
-                                        <td>{{$prd-> created_at}}</td>
+                                        <td>{{$prd->daily_price}} $</td>
                                         <td> <img src="upload/image/image_product/{{$prd->image}}" style="width:100px;height:100px"></td>
+                                        <td>{{$prd->weight}}</td>
+                                        <td>{{$prd->size}}</td>
+                                        <td>{{$prd->groupset}}</td>
+                                        <td>{{$prd->cassette}}</td>
                                         <td>
                                             <a href="admin/product/edit/{{$prd -> id}}" class="btn btn-sm btn-outline-primary">Edit</a>
                                             <a href="admin/product/delete/{{$prd -> id}}" class="btn btn-sm btn-outline-danger">Delete</a>
@@ -73,7 +62,7 @@
                                     </tr>
                                 @endforeach
                             </table>
-                            <button style="width: 200px;height: 30px"><a href="admin/product/add">Add New Product</a></button>
+                            <button style="width: 200px;height: 30px"><a href="admin/location/add">Add New Product</a></button>
                         </div>
                     </div>
                 </div>
@@ -95,11 +84,15 @@
         $(".data-table-feature").DataTable({
             sDom: '<"row view-filter"<"col-sm-12"<"float-right"l><"float-left"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
             "columns": [
+                {"data": "name"},
                 {"data": "location"},
                 {"data": "model"},
                 {"data": "dailyprice"},
-                {"data": "createat"},
                 {"data": "image"},
+                {"data": "size"},
+                {"data": "weight"},
+                {"data": "groupset"},
+                {"data": "cassette"},
                 {"data": "Action"},
 
             ],

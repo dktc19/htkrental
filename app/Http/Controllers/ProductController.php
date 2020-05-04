@@ -41,6 +41,10 @@ class ProductController extends Controller
             $product->image=$image;
         }
         $product->daily_price = $request->daily_price;
+        $product->weight = $request->weight;
+        $product->size = $request->size;
+        $product->groupset = $request->groupset;
+        $product->cassette = $request->cassette;
         $product->save();
 
         return redirect('admin/product/add')->with('notice','Add Successfully');

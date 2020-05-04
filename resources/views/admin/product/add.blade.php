@@ -76,6 +76,34 @@
                                         <div class="invalid-tooltip">Label Right!</div>
                                     </div>
                                 </div>
+                                <div class="tooltip-label-right">
+                                    <div class="error-l-100 position-relative form-group">
+                                        <label>Weight</label>
+                                        <input name="weight" required="" id="input1" type="text" class="form-control">
+                                        <div class="invalid-tooltip">Label Right!</div>
+                                    </div>
+                                </div>
+                                <div class="tooltip-label-right">
+                                    <div class="error-l-100 position-relative form-group">
+                                        <label>Size</label>
+                                        <input name="size" required="" id="input1" type="text" class="form-control">
+                                        <div class="invalid-tooltip">Label Right!</div>
+                                    </div>
+                                </div>
+                                <div class="tooltip-label-right">
+                                    <div class="error-l-100 position-relative form-group">
+                                        <label>Group Set</label>
+                                        <input name="groupset" required="" id="input1" type="text" class="form-control">
+                                        <div class="invalid-tooltip">Label Right!</div>
+                                    </div>
+                                </div>
+                                <div class="tooltip-label-right">
+                                    <div class="error-l-100 position-relative form-group">
+                                        <label>Cassette</label>
+                                        <input name="cassette" required="" id="input1" type="text" class="form-control">
+                                        <div class="invalid-tooltip">Label Right!</div>
+                                    </div>
+                                </div>
                                 <div class="input-group mb-3">
                                     <div class="custom-file">
                                         <input type="file" name="image" class="custom-file-input" id="inputGroupFile01">
