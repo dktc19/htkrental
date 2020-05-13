@@ -51,7 +51,7 @@ class ClientController extends Controller
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect('home');
+            return redirect()->back();
         } else {
             return redirect('login')->with('notice', 'Login Failed');
         }
@@ -150,6 +150,7 @@ class ClientController extends Controller
 
 
     public function getListProduct( Request $request){
+//        $product= Products::orderBy('created_at','asc')->paginate(4);
         $product= Products::orderBy('created_at','asc')->get();
         $typeproduct =TypeProducts::all();
         $id_typeproduct= $request->id_typeproduct;
@@ -223,8 +224,7 @@ class ClientController extends Controller
     }
 
     public function getCheckout(Request $request, $id){
-        $this ->validate($request,
-            [
+        $this ->validate($request, [
                 'pickupDate'=>'required',
                 'returnDate'=>'required',
                 'pickupLocation'=>'required',
@@ -247,7 +247,9 @@ class ClientController extends Controller
         $dayrent= Carbon::parse($pickupDate)->diffInDays(Carbon::parse($returnDate));
         $totalprice=($dayrent*$product->daily_price);
         $location = Locations::all();
-        return view('pages.checkout',['user'=>$user,'product'=>$product,'pickupLocation'=>$pickupLocation,'dropLocation'=>$dropLocation,'pickupDate'=>$pickupDate,'returnDate'=>$returnDate,'location'=>$location,'dayrent'=>$dayrent,'totalprice'=>$totalprice]);
+        return view('pages.checkout',['user'=>$user,'product'=>$product,
+            'pickupLocation'=>$pickupLocation,'dropLocation'=>$dropLocation,'pickupDate'=>$pickupDate,
+            'returnDate'=>$returnDate,'location'=>$location,'dayrent'=>$dayrent,'totalprice'=>$totalprice]);
     }
     public function postCheckout(Request $request,$id){
 
@@ -269,6 +271,10 @@ class ClientController extends Controller
         $User->phone = $request->phone;
         $User->save();
 
+        $findidProduct = $booking ->idProduct;
+        $product = Products::find($findidProduct);
+        $product->status = 1;
+        $product->save();
 
        return redirect("checkout/".$id)->with('noticebk','Booking Success');
     }
@@ -278,11 +284,17 @@ class ClientController extends Controller
         $user = User::all();
         $location =Locations::all();
         $product = Products::all();
-        return view('pages.processing',['booking'=>$booking,'user'=>$user,'location'=>$location,'product'=>$product]);
+        return view('pages.processing',['booking'=>$booking,
+            'user'=>$user,'location'=>$location,'product'=>$product]);
     }
-    public function getDelete($id){
+    public function getConfirm($id){
         $booking = Bookings::find($id);
-        $booking->delete();
+        $booking->status = 3;
+        $booking->save();
+        $findidProduct = $booking ->idProduct;
+        $product = Products::find($findidProduct);
+        $product->status = 0;
+        $product->save();
         return redirect('processing');
     }
 
@@ -323,7 +335,8 @@ class ClientController extends Controller
         }
         Mail::send('pages.email.confirm',[
             'id'=>$id],function ($message)use ($confirmEmail){
-            $message->to($confirmEmail,'Visitors')->subject('Booking Success');
+            $message->to($confirmEmail,'Visitors')
+                ->subject('Booking Success');
         });
         return redirect('processing');
     }

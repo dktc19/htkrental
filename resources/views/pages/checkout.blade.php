@@ -190,10 +190,12 @@
                                                 </div> <!-- end .row -->
                                             </div> <!-- end .container -->
                                         </div>
+                                        @if(isset($user_account))
                                         @if($user_account->active==1)
                                         <button type="submit" class="btn btn-primary"> Submit</button><!-- end .rq-element-wrapper -->
                                             @else <h4>You Must active email to booking</h4>
-                                        <a href="http://localhost:8080/FinalPJ/public/email/active/{{$user_account->id}}">Click to active</a>
+                                        <a href="http://localhost:8080/FinalPJ/public/email/active/{{$user->id}}">Click to active</a>
+                                            @endif
                                             @endif
                                     </form>
                                 @endif

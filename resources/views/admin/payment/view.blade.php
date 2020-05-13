@@ -44,7 +44,7 @@
                                     </tr>
                                 @endforeach
                             </table>
-                            <button style="width: 200px;height: 30px"><a href="admin/payment/add">Add New Product</a></button>
+                            <button style="width: 200px;height: 30px"><a href="admin/payment/add">Add New Payment</a></button>
                         </div>
                     </div>
                 </div>

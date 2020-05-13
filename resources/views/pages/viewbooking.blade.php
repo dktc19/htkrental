@@ -11,6 +11,7 @@
             <th style="width:15%;">Pickup Date</th>
             <th style="width:10%;">Return Date</th>
             <th style="width:10%;">Product</th>
+            <th style="width:10%;">Image of Product</th>
             <th style="width:10%;">Total Price</th>
             <th style="width:15%;">Status</th>
             </thead>
@@ -40,7 +41,13 @@
                         <td>{{$pr->title}}</td>
                             @endif
                         @endforeach
-                        <td>{{$bk->totalprice}}</td>
+                        @foreach($product as $pr)
+                            @if($bk->idProduct == $pr->id)
+                                <td><img src="upload/image/image_product/{{$pr->image}}" style="width:100px;height:100px"></td>
+                            @endif
+                        @endforeach
+                        <td>{{$bk->totalprice}} $</td>
+
                         @if($bk->status == 0)
                             <td>Waiting</td>
                             @elseif($bk->status == 1)

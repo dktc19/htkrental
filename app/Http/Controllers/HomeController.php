@@ -10,11 +10,14 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function getList(){
-        $review= Reviews::all();
+        //Declare variables to count objects
         $allBike = Products::count();
         $allBooking = Bookings::count();
         $allUser = User::count();
         $allLocation = Locations::count();
-        return view('admin.home.view',['allBike'=>$allBike, 'review'=>$review,'allBooking'=>$allBooking,'allUser'=>$allUser,'allLocation'=>$allLocation]);
+        return view('admin.home.view',['allBike'=>$allBike,
+            'allBooking'=>$allBooking,
+            'allUser'=>$allUser,
+            'allLocation'=>$allLocation]);
     }
 }

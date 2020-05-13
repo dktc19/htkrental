@@ -41,7 +41,7 @@
                                     </tr>
                                 @endforeach
                             </table>
-                            <button style="width: 200px;height: 30px"><a href="admin/role/add">Add New Product</a></button>
+                            <button style="width: 200px;height: 30px"><a href="admin/role/add">Add New Role</a></button>
                         </div>
                     </div>
                 </div>

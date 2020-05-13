@@ -205,7 +205,7 @@
                                 <div class="col-md-12">
                                     <div class="book-btn">
                                         <button class="rq-btn rq-btn-primary btn-large" type="submit"> Book Now <i
-                                                class="ion-android-car"></i></button>
+                                                class="fa fa-bicycle"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -213,6 +213,7 @@
                     </div>
                 </div>
             </div> <!-- /.rq-content-block -->
+
         </form>
         </div>
     </div> <!-- /.page-content -->

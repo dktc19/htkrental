@@ -18,7 +18,7 @@
             <tr ng-repeat="emp in empoyees">
                 @foreach($user as $us)
                     @if($bk->idUser == $us->id)
-                <td>{{$us->name}}</td>
+                <td>{{$us->email}}</td>
                     @endif
                 @endforeach
                 @foreach($location as $lc)
@@ -33,17 +33,18 @@
                 <td> {{$pr->title}}</td>
                         @endif
                     @endforeach
-                    <td>{{$bk->totalprice}}</td>
+                    <td>{{$bk->totalprice}} $</td>
                     @if($bk->status == 0)
                     <td>Waiting</td>
                     @elseif($bk->status == 1)<td>Waiting Payment</td>
-                        @else<td>Complete</td>
+                        @elseif($bk->status == 2)<td>Complete</td>
+                        @else<td>Confirm</td>
                     @endif
                 <td>
                     <div class="buttons">
                         <a href="processingBooking/{{$bk->id}}" class="btn btn-primary">Payment</a>
                         <a href="performingBooking/{{$bk->id}}" class="btn btn-primary"> Complete</a>
-                        <a href="processingDelete/{{$bk->id}}" class="btn btn-danger">Cancel</a>
+                        <a href="processingDelete/{{$bk->id}}" class="btn btn-danger">Confirm</a>
                     </div>
                 </td>
             </tr>

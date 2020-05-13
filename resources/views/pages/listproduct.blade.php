@@ -73,6 +73,8 @@
                         </div>
                     </div>
                 </form>
+
+
                 <div class="rq-car-listing-wrapper">
                     <div class="rq-listing-choose rq-listing-list">
                         <div class="row">
@@ -143,7 +145,7 @@
                                             </div>
                                         @endif
                                     @endif
-                                @elseif(!isset($id_typeproduct))
+                                @elseif(!isset($id_typeproduct)&&($pr->status == 0))
                                     <div class="col-md-4 col-sm-6">
                                         <div class="listing-single">
                                             <div class="listing-img">
@@ -177,12 +179,18 @@
                                 @endif
 
                             @endforeach
+
                         </div>
                     </div>
                 </div>
 
+
+{{--                <div class="rq-pagination">--}}
+{{--                    {{$product->links()}}--}}
+{{--                </div>--}}
             </div>
-        </div>  <!-- /.rq-content-block -->
+        </div>
+}<!-- /.rq-content-block -->
     </div>
 @endsection
 @section('script')

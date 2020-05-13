@@ -10,29 +10,9 @@
     <link rel="stylesheet" href="cssAdmin/css/vendor/component-custom-switch.min.css"/>
     <link rel="stylesheet" href="cssAdmin/css/main.css"/>
 @endsection
-
 @section('content')
-
     <main>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Datatables Default</h1>
-                    <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
-                        <ol class="breadcrumb pt-0">
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Library</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
-                    <div class="separator mb-5"></div>
-                </div>
-            </div>
-
             <div class="row mb-4">
                 <div class="col-12 mb-4">
                     <div class="card">
@@ -75,7 +55,7 @@
                                     </tr>
                                 @endforeach
                             </table>
-                            <button style="width: 200px;height: 30px"><a href="admin/user/add">Add New Product</a></button>
+                            <button style="width: 200px;height: 30px"><a href="admin/user/add">Add New User</a></button>
                         </div>
                     </div>
                 </div>

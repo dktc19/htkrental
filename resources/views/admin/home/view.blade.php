@@ -35,9 +35,7 @@
                                         </div>
                                     </a>
                                 </li>
-
                             </ul>
-
                         </div>
                         <div>
                             <ul class="glide__slides">
@@ -50,15 +48,12 @@
                                         </div>
                                     </a>
                                 </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
     </div>
-
     </div>
 </main>
 @endsection
