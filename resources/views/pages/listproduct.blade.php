@@ -176,18 +176,19 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 @endif
 
                             @endforeach
 
                         </div>
+
                     </div>
                 </div>
 
-
-{{--                <div class="rq-pagination">--}}
-{{--                    {{$product->links()}}--}}
-{{--                </div>--}}
+                <div class="rq-pagination">
+                    {{$product->links()}}
+                </div>
             </div>
         </div>
 }<!-- /.rq-content-block -->

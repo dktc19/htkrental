@@ -482,7 +482,7 @@
 
                             <div style="Margin-left: 20px;Margin-right: 20px;">
                                 <div style="mso-line-height-rule: exactly;mso-text-raise: 11px;vertical-align: middle;">
-                                    <center><h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Please verify your email to receive a discount...</h2></center>
+                                    <center><h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Please verify your email</h2></center>
                                 </div>
                             </div>
 

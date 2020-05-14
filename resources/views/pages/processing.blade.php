@@ -4,9 +4,9 @@
     <form id="empform" action="processing" method="GET">
         <table id="mytable" class="table table-bordered">
             <thead>
-            <th style="width:5%;">UserName</th>
+            <th style="width:10%;">UserName</th>
             <th style="width:10%;">Pickup Location</th>
-            <th style="width:15%;">Pickup Date</th>
+            <th style="width:10%;">Pickup Date</th>
             <th style="width:10%;">Return Date</th>
             <th style="width:10%;">Product</th>
             <th style="width:10%;">Total Price</th>
@@ -35,15 +35,15 @@
                     @endforeach
                     <td>{{$bk->totalprice}} $</td>
                     @if($bk->status == 0)
-                    <td>Waiting</td>
-                    @elseif($bk->status == 1)<td>Waiting Payment</td>
-                        @elseif($bk->status == 2)<td>Complete</td>
-                        @else<td>Confirm</td>
+                    <td style="color: #efa80f; font-size: 30px">Pending</td>
+                    @elseif($bk->status == 1)<td style="color: #efa80f;font-size: 30px">Waiting Payment</td>
+                        @elseif($bk->status == 2)<td style="color: #035aa6;font-size: 30px">Complete</td>
+                        @else<td style="color: #c02739;font-size: 30px">Confirm</td>
                     @endif
                 <td>
                     <div class="buttons">
                         <a href="processingBooking/{{$bk->id}}" class="btn btn-primary">Payment</a>
-                        <a href="performingBooking/{{$bk->id}}" class="btn btn-primary"> Complete</a>
+                        <a href="performingBooking/{{$bk->id}}" class="btn btn-success"> Complete</a>
                         <a href="processingDelete/{{$bk->id}}" class="btn btn-danger">Confirm</a>
                     </div>
                 </td>

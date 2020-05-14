@@ -96,12 +96,12 @@ class ClientController extends Controller
         return view('pages.activesuccess');
     }
 
-    public function getActiveEmail($id){
-        $user =User::find($id);
-        $user->active = 1;
-        $user->save();
-        return view('pages.activesuccess');
-    }
+//    public function getActiveEmail($id){
+//        $user =User::find($id);
+//        $user->active = 1;
+//        $user->save();
+//        return view('pages.activesuccess');
+//    }
 
 
     public function getLogout(){
@@ -150,8 +150,8 @@ class ClientController extends Controller
 
 
     public function getListProduct( Request $request){
-//        $product= Products::orderBy('created_at','asc')->paginate(4);
-        $product= Products::orderBy('created_at','asc')->get();
+        $product= Products::orderBy('created_at','asc')->paginate(5);
+//        $product= Products::orderBy('created_at','asc')->get();
         $typeproduct =TypeProducts::all();
         $id_typeproduct= $request->id_typeproduct;
         $price_min = $request->price_min;
@@ -354,5 +354,26 @@ class ClientController extends Controller
 
     public function getError(){
         return view('pages.error');
+    }
+    public function getEmail($id){
+        $user = User::find($id);
+        $activemail = $user->email;
+        Mail::send('pages.email.active',[
+            'id'=>$id],function ($message)use ($activemail){
+            $message->to($activemail,'Visitors')->subject('Active Email success');
+        });
+        return redirect()->back();
+    }
+
+    public function postEditbooking($id, Request $request){
+        $booking = Bookings::find($id);
+        $product = Products::find($booking->idProduct);
+        $booking->pickupDay = Carbon::parse( $request->pickupDay);
+        $booking->dropDay = Carbon::parse( $request->dropDay);
+        $dayrent= Carbon::parse($request->pickupDay)->diffInDays(Carbon::parse($request->dropDay));
+        $totalprice=($dayrent*$product->daily_price);
+        $booking->totalprice = $totalprice;
+        $booking->save();
+        return redirect()->back();
     }
 }

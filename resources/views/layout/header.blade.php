@@ -52,7 +52,6 @@
                         <li class="login-register-link right-side-link"><a href="login" style="font-size:100%;">
                                 <i class="icon_lock-open_alt" ></i>Login/Register</a>
                         </li>
-
                         @else
                             <li class="dropdown">
                                 <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -75,15 +74,10 @@
                                     <li><a href="logout"><i class="fa fa-sign-out" style="font-size:16px"></i>&nbsp;&nbsp;Logout</a></li>
                                 </ul>
                             </li>
-
         <li><a href="viewbooking" style="font-size:13px;">
                 <i></i>View your Booking</a>
         </li>
-
                         @endif
-                            <li><a href="error" style="font-size:13px;">
-                                    <i></i>Checkout</a>
-                            </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

@@ -488,6 +488,11 @@
                                     <h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;"> Click below to receive our bank account information</h2>
                                 </div>
                             </div>
+                            <div style="Margin-left: 20px;Margin-right: 20px;">
+                                <div style="mso-line-height-rule: exactly;mso-text-raise: 11px;vertical-align: middle;">
+                                    <h2 style="Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;"> Click below to receive our bank account information</h2>
+                                </div>
+                            </div>
                             <div style="Margin-left: 20px;Margin-right: 20px;Margin-bottom: 24px;">
                                 <div class="btn btn--flat btn--large" style="text-align:center;">
                                     <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #efa80f;font-family: Open Sans, sans-serif;" href="http://localhost:8080/FinalPJ/public/email/paymentsuccess">Payment to Your Order</a><![endif]>
@@ -497,6 +502,7 @@
                                         <h2>The form of payment will be by banking transfer</h2>&nbsp;</div>
                                 </div>
                             </div>
+
 
                         </div>
                         <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
